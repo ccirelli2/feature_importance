@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b6d1afa-a118-4f4a-b7aa-277a13988d94" name="Changes" comment="setup">
-      <change afterPath="$PROJECT_DIR$/.idea/feature_importance.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/examples/example-majority-vote.logs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/example_majority_vote.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/src/test_placeholder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example_pre_commit_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.pre-commit-config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/placeholder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/placeholder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/src/placeholder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/examples/example-majority-vote.logs" beforeDir="false" afterPath="$PROJECT_DIR$/data/examples/example-majority-vote.logs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example_majority_vote.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_majority_vote.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +23,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ccirelli2"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="192d7c69-95c7-4ac9-b407-dff357df4f49" />
+        <option name="url" value="https://github.com/ccirelli2/feature_importance.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -215,14 +218,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698492992954</updated>
-    </task>
-    <task id="LOCAL-00005" summary="initial setup continued.">
-      <option name="closed" value="true" />
-      <created>1698582235325</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1698582235325</updated>
     </task>
     <task id="LOCAL-00006" summary="initial setup continued.">
       <option name="closed" value="true" />
@@ -608,7 +603,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701563238489</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="setup">
+      <option name="closed" value="true" />
+      <created>1708379580878</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1708379580878</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

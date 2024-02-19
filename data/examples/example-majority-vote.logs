@@ -4,3 +4,22 @@
 2024-02-19 16:45:24,382 [MainThread  ] [INFO ]  	 objective: classification, threshold: 0.5, estimators: None
 2024-02-19 16:45:45,633 [MainThread  ] [INFO ]  Class object MajorityVoteFeatureImportance instantiated successfully with the followig parameters:
 2024-02-19 16:45:45,633 [MainThread  ] [INFO ]  	 objective: classification, threshold: 0.5, estimators: None
+2024-02-19 16:59:43,394 [MainThread  ] [INFO ]  Class object MajorityVoteFeatureImportance instantiated successfully with the following parameters:
+2024-02-19 17:00:08,419 [MainThread  ] [INFO ]  Class object MajorityVoteFeatureImportance instantiated successfully with the following parameters:
+2024-02-19 17:00:08,419 [MainThread  ] [INFO ]  	 objective: classification, threshold: 0.5, estimators: None
+2024-02-19 17:17:47,228 [MainThread  ] [INFO ]  Class object MajorityVoteFeatureImportance instantiated successfully with the following parameters:
+2024-02-19 17:17:47,228 [MainThread  ] [INFO ]  	 objective: classification, threshold: 0.5, estimators: None
+2024-02-19 17:17:55,009 [MainThread  ] [INFO ]  Class object MajorityVoteFeatureImportance instantiated successfully with the following parameters:
+2024-02-19 17:17:55,010 [MainThread  ] [INFO ]  	 objective: classification, threshold: 0.5, estimators: None
+2024-02-19 17:17:55,010 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-19 17:17:55,010 [MainThread  ] [INFO ]  No data was provided.  Generating synthetic data.
+2024-02-19 17:18:18,687 [MainThread  ] [INFO ]  Class object MajorityVoteFeatureImportance instantiated successfully with the following parameters:
+2024-02-19 17:18:18,687 [MainThread  ] [INFO ]  	 objective: classification, threshold: 0.5, estimators: None
+2024-02-19 17:18:18,687 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-19 17:18:18,687 [MainThread  ] [INFO ]  No data was provided.  Generating synthetic data.
+2024-02-19 17:18:18,688 [MainThread  ] [INFO ]  Data shape: (100, 21), X shape: (100, 20), y shape: (100,)
+2024-02-19 17:19:16,545 [MainThread  ] [INFO ]  Class object MajorityVoteFeatureImportance instantiated successfully with the following parameters:
+2024-02-19 17:19:16,545 [MainThread  ] [INFO ]  	 objective: classification, threshold: 0.5, estimators: None
+2024-02-19 17:19:16,545 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-19 17:19:16,545 [MainThread  ] [INFO ]  No data was provided.  Generating synthetic data.
+2024-02-19 17:19:16,549 [MainThread  ] [INFO ]  Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
