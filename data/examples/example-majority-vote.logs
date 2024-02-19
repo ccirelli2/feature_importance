@@ -1,0 +1,6 @@
+2024-02-19 16:36:39,283 [MainThread  ] [INFO ]  Class object MajorityVoteFeatureImportance instantiated successfully
+2024-02-19 16:45:00,443 [MainThread  ] [INFO ]  Class object MajorityVoteFeatureImportance instantiated successfully
+2024-02-19 16:45:24,382 [MainThread  ] [INFO ]  Class object MajorityVoteFeatureImportance instantiated successfully
+2024-02-19 16:45:24,382 [MainThread  ] [INFO ]  	 objective: classification, threshold: 0.5, estimators: None
+2024-02-19 16:45:45,633 [MainThread  ] [INFO ]  Class object MajorityVoteFeatureImportance instantiated successfully with the followig parameters:
+2024-02-19 16:45:45,633 [MainThread  ] [INFO ]  	 objective: classification, threshold: 0.5, estimators: None

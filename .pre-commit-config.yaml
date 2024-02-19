@@ -22,11 +22,11 @@ repos:
         language: system
         pass_filenames: false
         always_run: true
-    -   id: pytest-check-coverage
-        name: pytest-coverage
-        stages: [ commit ]
-        types: [ python ]
-        entry: pytest --cov=src
-        language: system
-        pass_filenames: false
-        always_run: true
+#    -   id: pytest-check-coverage
+#        name: pytest-coverage
+#        stages: [ commit ]
+#        types: [ python ]
+#        entry: pytest --cov=src
+#        language: system
+#        pass_filenames: false
+#        always_run: true

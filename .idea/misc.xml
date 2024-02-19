@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Poetry (ml-fairness)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (ml-fairness)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (feature_importance)" project-jdk-type="Python SDK" />
 </project>
