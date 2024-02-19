@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8b6d1afa-a118-4f4a-b7aa-277a13988d94" name="Changes" comment="added final ml dataset transform + lightgbm script.">
+      <change afterPath="$PROJECT_DIR$/data/imgs/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/imgs/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/imgs/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/imgs/img_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/imgs/img_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/0/meta.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/artifacts/Classification Report - Train" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/artifacts/Confusion Matrix - All" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/artifacts/Confusion Matrix - Test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/artifacts/Confusion Matrix - Train" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/meta.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Accuracy All" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Accuracy Test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Accuracy Train" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Test F1-Score 0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Test F1-Score 1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Test Precision 0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Test Precision 1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Test Recall 0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Test Recall 1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Training F1-Score 0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Training F1-Score 1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Training Precision 0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Training Precision 1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Training Recall 0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/metrics/Training Recall 1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/Boosting Type" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/Class Threshold" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/Excluded Features" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/Feature Set" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/Fill Nulls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/Is Unbalanced" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/Metric" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/Number of Rounds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/Number of Rows" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/Objective" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/Sample" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/Start Time" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/Target Column" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/UUID" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/params/Verbosity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/tags/mlflow.runName" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/tags/mlflow.source.git.commit" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/tags/mlflow.source.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/tags/mlflow.source.type" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/606f148375924b4a8ae5e590a26c03d6/tags/mlflow.user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/273474373754254731/meta.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/models/lightgbm_experiment_b64e29f7-44f4-4fbe-88fd-2b80ead22013/target_distribution.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/report/draft_Proof_SUD-Fairness.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/light_gbm_example.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/light_gbm_loss_cost_modeling_06142021_(1).ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ml-fairness.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ml-fairness.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/model_lightgbm.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/model_lightgbm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratch.py" beforeDir="false" afterPath="$PROJECT_DIR$/scratch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feature_importance.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature_importance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modeling.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/modeling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transforms/pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/transforms/pipeline.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2XOH1hOvbywCiXc1SuTwZywfy2z" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/christopher-cirelli/repositories/ml-fairness/transforms/enhance&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/transforms/enhance" />
+      <recent name="$PROJECT_DIR$/transforms/eda" />
+      <recent name="$PROJECT_DIR$/examples" />
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/documentation/meetings" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/imgs" />
+      <recent name="$PROJECT_DIR$/transforms/enhance" />
+      <recent name="$PROJECT_DIR$/tests/src" />
+      <recent name="$PROJECT_DIR$/tests/src/cleaning" />
+      <recent name="$PROJECT_DIR$/tests/src/enhance" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.model_lightgbm">
+    <configuration name="base" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml-fairness" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/base.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="feature_importance" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml-fairness" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/feature_importance.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="model_lightgbm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml-fairness" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/model_lightgbm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="modeling" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml-fairness" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/modeling.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml-fairness" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.model_lightgbm" />
+        <item itemvalue="Python.scratch" />
+        <item itemvalue="Python.modeling" />
+        <item itemvalue="Python.base" />
+        <item itemvalue="Python.feature_importance" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b6d1afa-a118-4f4a-b7aa-277a13988d94" name="Changes" comment="" />
+      <created>1698492992954</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698492992954</updated>
+    </task>
+    <task id="LOCAL-00005" summary="initial setup continued.">
+      <option name="closed" value="true" />
+      <created>1698582235325</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698582235325</updated>
+    </task>
+    <task id="LOCAL-00006" summary="initial setup continued.">
+      <option name="closed" value="true" />
+      <created>1698590490866</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698590490867</updated>
+    </task>
+    <task id="LOCAL-00007" summary="misc.">
+      <option name="closed" value="true" />
+      <created>1698800179954</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698800179954</updated>
+    </task>
+    <task id="LOCAL-00008" summary="misc.">
+      <option name="closed" value="true" />
+      <created>1698881478080</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698881478080</updated>
+    </task>
+    <task id="LOCAL-00009" summary="misc.">
+      <option name="closed" value="true" />
+      <created>1698881519058</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1698881519058</updated>
+    </task>
+    <task id="LOCAL-00010" summary="misc.">
+      <option name="closed" value="true" />
+      <created>1698954295184</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1698954295184</updated>
+    </task>
+    <task id="LOCAL-00011" summary="misc.">
+      <option name="closed" value="true" />
+      <created>1698956262534</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1698956262534</updated>
+    </task>
+    <task id="LOCAL-00012" summary="misc.">
+      <option name="closed" value="true" />
+      <created>1698956539068</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1698956539068</updated>
+    </task>
+    <task id="LOCAL-00013" summary="misc.">
+      <option name="closed" value="true" />
+      <created>1699193599029</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1699193599029</updated>
+    </task>
+    <task id="LOCAL-00014" summary="misc.">
+      <option name="closed" value="true" />
+      <created>1699193981112</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1699193981112</updated>
+    </task>
+    <task id="LOCAL-00015" summary="misc.">
+      <option name="closed" value="true" />
+      <created>1699194039472</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1699194039472</updated>
+    </task>
+    <task id="LOCAL-00016" summary="misc.">
+      <option name="closed" value="true" />
+      <created>1699230177478</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1699230177478</updated>
+    </task>
+    <task id="LOCAL-00017" summary="misc.">
+      <option name="closed" value="true" />
+      <created>1699230252921</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1699230252921</updated>
+    </task>
+    <task id="LOCAL-00018" summary="misc.">
+      <option name="closed" value="true" />
+      <created>1699789014729</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1699789014729</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Adding tests.">
+      <option name="closed" value="true" />
+      <created>1699792346641</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1699792346641</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Adding tests.">
+      <option name="closed" value="true" />
+      <created>1699794212285</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1699794212285</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Adding tests.">
+      <option name="closed" value="true" />
+      <created>1699796330081</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1699796330081</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Adding tests.">
+      <option name="closed" value="true" />
+      <created>1699797094116</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1699797094116</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Adding tests.">
+      <option name="closed" value="true" />
+      <created>1699797140555</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1699797140555</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Adding tests.">
+      <option name="closed" value="true" />
+      <created>1699803449057</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1699803449057</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Adding tests.">
+      <option name="closed" value="true" />
+      <created>1699803576023</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1699803576023</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Adding tests.">
+      <option name="closed" value="true" />
+      <created>1699803614820</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1699803614820</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Adding tests.">
+      <option name="closed" value="true" />
+      <created>1699803672603</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1699803672603</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Adding tests.">
+      <option name="closed" value="true" />
+      <created>1699803997339</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1699803997339</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Adding tests.">
+      <option name="closed" value="true" />
+      <created>1699805192015</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1699805192015</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Updated pipeline.">
+      <option name="closed" value="true" />
+      <created>1699814763551</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1699814763551</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Updated pipeline.">
+      <option name="closed" value="true" />
+      <created>1699840149274</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1699840149275</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Updated pipeline.">
+      <option name="closed" value="true" />
+      <created>1699840589421</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1699840589421</updated>
+    </task>
+    <task id="LOCAL-00033" summary="added tests and drop null columns.">
+      <option name="closed" value="true" />
+      <created>1700313842005</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1700313842005</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Added test for DropNullCol class and methods.">
+      <option name="closed" value="true" />
+      <created>1700334510414</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1700334510414</updated>
+    </task>
+    <task id="LOCAL-00035" summary="updated pipeline.  utilized black formatting on src and example files.">
+      <option name="closed" value="true" />
+      <created>1700349043245</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1700349043245</updated>
+    </task>
+    <task id="LOCAL-00036" summary="added tests and example scripts for enhancement functions.">
+      <option name="closed" value="true" />
+      <created>1700404888007</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1700404888007</updated>
+    </task>
+    <task id="LOCAL-00037" summary="added tests and example scripts for enhancement functions.">
+      <option name="closed" value="true" />
+      <created>1700406372822</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1700406372822</updated>
+    </task>
+    <task id="LOCAL-00038" summary="code for multi collinearity analysis.">
+      <option name="closed" value="true" />
+      <created>1700500406307</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1700500406307</updated>
+    </task>
+    <task id="LOCAL-00039" summary="code for chi2 test">
+      <option name="closed" value="true" />
+      <created>1700510304978</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1700510304978</updated>
+    </task>
+    <task id="LOCAL-00040" summary="code for chi2 test">
+      <option name="closed" value="true" />
+      <created>1700510459969</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1700510459969</updated>
+    </task>
+    <task id="LOCAL-00041" summary="code for chi2 test">
+      <option name="closed" value="true" />
+      <created>1700511260722</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1700511260722</updated>
+    </task>
+    <task id="LOCAL-00042" summary="example for random forest algorithm.">
+      <option name="closed" value="true" />
+      <created>1700607126599</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1700607126600</updated>
+    </task>
+    <task id="LOCAL-00043" summary="feature importance script beta.">
+      <option name="closed" value="true" />
+      <created>1700660774820</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1700660774820</updated>
+    </task>
+    <task id="LOCAL-00044" summary="feature importance script beta.">
+      <option name="closed" value="true" />
+      <created>1700661073132</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1700661073132</updated>
+    </task>
+    <task id="LOCAL-00045" summary="feature importance script beta.">
+      <option name="closed" value="true" />
+      <created>1700926310814</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1700926310814</updated>
+    </task>
+    <task id="LOCAL-00046" summary="feature importance script beta.">
+      <option name="closed" value="true" />
+      <created>1700926330998</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1700926330998</updated>
+    </task>
+    <task id="LOCAL-00047" summary="feature importance script beta.">
+      <option name="closed" value="true" />
+      <created>1701118641439</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1701118641439</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Updated feature importance code.&#10;&#10;- Remove function to merge chi2 and models feature importance functions.&#10;- Replaced feature rank with feature is importance (1 or 0)&#10;- Replaced feature rank sum with sum of model votes.&#10;- Added a majority vote function: 1 if total vote &gt;= N-1 else 0 where N is the number of models.">
+      <option name="closed" value="true" />
+      <created>1701132385137</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1701132385138</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Update importance code&#10;&#10;- changed _is_feature_significant threshold to importance median versus is true threshold.">
+      <option name="closed" value="true" />
+      <created>1701134558018</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1701134558018</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Update importance code">
+      <option name="closed" value="true" />
+      <created>1701168420738</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1701168420739</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Update importance code">
+      <option name="closed" value="true" />
+      <created>1701530333737</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1701530333738</updated>
+    </task>
+    <task id="LOCAL-00052" summary="added final ml dataset transform + lightgbm script.">
+      <option name="closed" value="true" />
+      <created>1701537375015</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1701537375015</updated>
+    </task>
+    <task id="LOCAL-00053" summary="added final ml dataset transform + lightgbm script.">
+      <option name="closed" value="true" />
+      <created>1701563238489</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1701563238489</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Initial commit and project setup." />
+    <MESSAGE value="initial setup continued." />
+    <MESSAGE value="misc." />
+    <MESSAGE value="Adding tests." />
+    <MESSAGE value="Updated pipeline." />
+    <MESSAGE value="added tests and drop null columns." />
+    <MESSAGE value="Added test for DropNullCol class and methods." />
+    <MESSAGE value="updated pipeline.  utilized black formatting on src and example files." />
+    <MESSAGE value="added tests and example scripts for enhancement functions." />
+    <MESSAGE value="code for multi collinearity analysis." />
+    <MESSAGE value="code for chi2 test" />
+    <MESSAGE value="example for random forest algorithm." />
+    <MESSAGE value="feature importance script beta." />
+    <MESSAGE value="Updated feature importance code.&#10;&#10;- Remove function to merge chi2 and models feature importance functions.&#10;- Replaced feature rank with feature is importance (1 or 0)&#10;- Replaced feature rank sum with sum of model votes.&#10;- Added a majority vote function: 1 if total vote &gt;= N-1 else 0 where N is the number of models." />
+    <MESSAGE value="Update importance code&#10;&#10;- changed _is_feature_significant threshold to importance median versus is true threshold." />
+    <MESSAGE value="Update importance code" />
+    <MESSAGE value="added final ml dataset transform + lightgbm script." />
+    <option name="LAST_COMMIT_MESSAGE" value="added final ml dataset transform + lightgbm script." />
+  </component>
+</project>
