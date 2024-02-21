@@ -7,6 +7,7 @@ import git
 from uuid import uuid4
 import pandas as pd
 import numpy as np
+from typing import Dict, Union
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
@@ -25,6 +26,7 @@ from sklearn.impute import SimpleImputer
 
 # Modeling
 from lightgbm import LGBMClassifier, LGBMRegressor
+from sklearn.ensemble import RandomForestClassifier
 
 # Project
 from src import utils
@@ -70,7 +72,7 @@ class BaseClass:
         categorical_features (list): List of names of categorical features in the data.
         generate_synthetic_data (bool): Whether synthetic data is generated.
         num_samples_synthetic (int): Number of samples generated if synthetic data is used.
-        estimators (tuple): A tuple containing a name and an sklearn estimator object.
+        estimators (tuple): A tuple containing a name and a sklearn estimator object.
         categorical_transformer (sklearn.pipeline.Pipeline): Pipeline for categorical data transformation.
         numeric_transformer (sklearn.pipeline.Pipeline): Pipeline for numeric data transformation.
         column_transformer (sklearn.compose.ColumnTransformer): ColumnTransformer for combined transformations.
@@ -108,6 +110,8 @@ class BaseClass:
         self.categorical_transformer = Pipeline(steps=[])
         self.numeric_transformer = Pipeline(steps=[])
         self.column_transformer = ColumnTransformer(transformers=[])
+        self.estimator_pipelines: Dict[str, Union[BaseEstimator, Pipeline]] = {}
+        self.estimator_predictions: Dict[str, np.ndarray] = {}
         self.X_train = pd.DataFrame({})
         self.X_test = pd.DataFrame({})
         self.y_train = pd.DataFrame({})
@@ -128,9 +132,9 @@ class BaseClass:
                     X, columns=[f"feature_{i}" for i in range(X.shape[1])]
                 )
                 data[self.target_column] = y
-                self.feature_set = data.columns
-                self.numeric_features = data.columns[:10]
-                self.categorical_features = data.columns[10:-1]
+                self.feature_set = data.columns.tolist()
+                self.numeric_features = self.feature_set[:10]
+                self.categorical_features = self.feature_set[10:-1]
                 logger.info(
                     f"\t Data shape: {data.shape}, X shape: {X.shape}, y shape: {y.shape}"
                 )
@@ -144,21 +148,33 @@ class BaseClass:
                     X, columns=[f"feature_{i}" for i in range(X.shape[1])]
                 )
                 data[self.target_column] = y
-                self.feature_set = data.columns
-                self.numeric_features = data.columns[:10]
-                self.categorical_features = data.columns[10:-1]
+                self.feature_set = data.columns.tolist()
+                self.numeric_features = self.feature_set[:10]
+                self.categorical_features = self.feature_set[10:-1]
                 logger.info(
                     f"\t Data shape: {data.shape}, X shape: {X.shape}, y shape: {y.shape}"
                 )
                 self.data = data
         return self
 
+    def _generate_train_test_split(self):
+        logger.info("Generating the train test split.")
+        X = self.data[self.feature_set]
+        y = self.data[self.target_column]
+        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+            X, y, test_size=self.test_size, stratify=y
+        )
+        return self
+
     def _build_categorical_transformer(self):
         logger.info("Building the categorical transformer.")
+        cat_features = [self.feature_set.index(f) for f in self.categorical_features]
         self.categorical_transformer = Pipeline(
             steps=[
-                ("imputer", SimpleImputer(strategy="most_frequency")),
-                ("encoder", CountEncoder(handle_unknown="return_nan")),
+                (
+                    "encoder",
+                    CountEncoder(handle_unknown="value", handle_missing="value"),
+                )
             ]
         )
         return self
@@ -177,19 +193,51 @@ class BaseClass:
         logger.info("Building the column transformer.")
         self.column_transformer = ColumnTransformer(
             transformers=[
-                ("num", self.numeric_transformer, self.numeric_features),
-                ("cat", self.categorical_transformer, self.categorical_features),
+                (
+                    "num",
+                    self.numeric_transformer,
+                    [self.feature_set.index(f) for f in self.numeric_features],
+                ),
+                (
+                    "cat",
+                    self.categorical_transformer,
+                    [self.feature_set.index(f) for f in self.categorical_features],
+                ),
             ]
         )
         return self
 
-    def _generate_train_test_split(self):
-        logger.info("Generating the train test split.")
-        X = self.data[self.feature_set]
-        y = self.data[self.target_column]
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
-            X, y, test_size=self.test_size, stratified=y
-        )
+    def _build_estimator_pipelines(self):
+        assert self.estimators, "No estimators found."
+        logger.info("Building estimator pipelines.")
+        for name, estimator in self.estimators:
+            conditions = [
+                hasattr(RandomForestClassifier, "predict"),
+                hasattr(RandomForestClassifier, "predict_proba"),
+                hasattr(RandomForestClassifier, "fit"),
+            ]
+            if not all(conditions):
+                logger.warn(
+                    f"\t Unable to Add Estimator {name} as it lacks the required methods."
+                )
+            else:
+                logger.info(f"\t\t Adding Estimator {name}")
+                self.estimator_pipelines[name] = Pipeline(
+                    steps=[
+                        ("preprocessor", self.column_transformer),
+                        ("estimator", estimator),
+                    ]
+                )
+        return self
+
+    def _generate_estimator_predictions(self):
+        assert self.estimators, "No estimators found."
+        logger.info("Generating predictions.")
+        for name, pipeline in self.estimator_pipelines.items():
+            logger.info(f"\t Generating predictions for {name}")
+            pipeline.fit(self.X_train, self.y_train)
+            self.estimator_predictions[name] = pipeline.predict(self.X_test)
+            logger.info(f"\t\t Predictions for {name} generated successfully.")
         return self
 
     def fit(self):
@@ -199,6 +247,7 @@ class BaseClass:
         self._build_categorical_transformer()
         self._build_numeric_transformer()
         self._build_column_transformer()
+        self._build_estimator_pipelines()
         return self
 
     def transform_data(self):
@@ -211,10 +260,16 @@ class BaseClass:
         logger.info("Fitting and transforming the model.")
         self.fit()
         self.transform_data()
+        self._generate_estimator_predictions()
         return self
 
 
 class FeatureImportanceRegression:
+    """
+    We need to separate the feature importance for classification and regression models because the
+    evaluation metrics and feature importance will be different.
+    """
+
     def __init(self):
         pass
 
@@ -225,5 +280,13 @@ class FeatureImportanceClassification:
 
 
 if __name__ == "__main__":
-    mvfi = BaseClass(generate_synthetic_data=True, objective="classification")
-    mvfi.fit()
+    mvfi = BaseClass(
+        generate_synthetic_data=True,
+        objective="classification",
+        estimators=(
+            ("RandomForestClassifier", RandomForestClassifier()),
+            ("LGBMClassifier", LGBMClassifier()),
+        ),
+    )
+
+    mvfi.fit_transform()
