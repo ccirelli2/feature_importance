@@ -1,6 +1,6 @@
 ![](https://github.com/pragyy/datascience-readme-template/blob/main/Headerheader.jpg)
 
-# Project Title
+# Majority Vote Feature Importance
 
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/pragyy/datascience-readme-template?include_prereleases)
 ![GitHub last commit](https://img.shields.io/github/last-commit/pragyy/datascience-readme-template)
