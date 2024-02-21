@@ -19,6 +19,7 @@ scikit-learn = "^1.4.1.post1"
 lightgbm = "^4.3.0"
 pandas = "^2.2.0"
 pyarrow = "^15.0.0"
+category-encoders = "^2.6.3"
 
 
 [build-system]

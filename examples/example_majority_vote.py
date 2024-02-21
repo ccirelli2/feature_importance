@@ -7,6 +7,13 @@ import git
 from uuid import uuid4
 import pandas as pd
 import numpy as np
+from sklearn.preprocessing import StandardScaler
+from sklearn.impute import SimpleImputer
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.model_selection import train_test_split
+from category_encoders.count import CountEncoder
+from sklearn.base import BaseEstimator
 
 # Data
 from sklearn.datasets import make_classification, make_regression
@@ -35,15 +42,45 @@ logger = utils.Logger(
 ).get_logger()
 
 
-class MajorityVoteFeatureImportance:
+class BaseClass:
     """
-    Class object to measure feature important using majority voting across n-estimators.
+    Base class for building and evaluating machine learning models.
 
-    ::objective: str value.  The objective of the model.  Either 'classification' or 'regression'.
-    ::vote_threshold: float value > 0 and < 1.  The threshold value is used to select the most important features by model.
-        If a feature is important it is assigned a one.
-    ::estimators: list of estimators to use for majority voting.  All estimators must implement fit and
-        predict methods.  All estimators will be called using the default parameter values.
+    This class provides basic functionalities for loading and preprocessing data,
+    splitting data into training and testing sets, fitting estimators, and
+    transforming data.
+
+    Args:
+        objective (str, optional): The objective of the model. Must be 'classification' or 'regression'. Defaults to 'classification'.
+        data (pd.DataFrame, optional): The pandas DataFrame containing the data. Defaults to empty DataFrame.
+        target_column (str, optional): The name of the target column in the data. Defaults to 'TARGET'.
+        test_size (float, optional): The proportion of data to use for the test set. Defaults to 0.33.
+        numeric_features (list, optional): List of names of numeric features in the data. Defaults to empty list.
+        categorical_features (list, optional): List of names of categorical features in the data. Defaults to empty list.
+        generate_synthetic_data (bool, optional): Whether to generate synthetic data if no data is provided. Defaults to False.
+        num_samples_synthetic (int, optional): Number of samples to generate if synthetic data is used. Defaults to 10000.
+        estimators (tuple, optional): A tuple containing a name and an sklearn estimator object. Defaults to an empty tuple.
+
+    Attributes:
+        objective (str): The objective of the model.
+        data (pd.DataFrame): The pandas DataFrame containing the data.
+        target_column (str): The name of the target column in the data.
+        test_size (float): The proportion of data to use for the test set.
+        numeric_features (list): List of names of numeric features in the data.
+        categorical_features (list): List of names of categorical features in the data.
+        generate_synthetic_data (bool): Whether synthetic data is generated.
+        num_samples_synthetic (int): Number of samples generated if synthetic data is used.
+        estimators (tuple): A tuple containing a name and an sklearn estimator object.
+        categorical_transformer (sklearn.pipeline.Pipeline): Pipeline for categorical data transformation.
+        numeric_transformer (sklearn.pipeline.Pipeline): Pipeline for numeric data transformation.
+        column_transformer (sklearn.compose.ColumnTransformer): ColumnTransformer for combined transformations.
+        X_train (pd.DataFrame): The training data features.
+        X_test (pd.DataFrame): The test data features.
+        y_train (pd.DataFrame): The training data target labels.
+        y_test (pd.DataFrame): The test data target labels.
+
+    Raises:
+        AssertionError: If the objective is not 'classification' or 'regression'.
     """
 
     def __init__(
@@ -51,54 +88,142 @@ class MajorityVoteFeatureImportance:
         objective: str = "classification",
         data: pd.DataFrame = pd.DataFrame(),
         target_column: str = "TARGET",
-        vote_threshold: float = 0.5,
-        estimators: list = None,
+        test_size: float = 0.33,
+        numeric_features: list = [],
+        categorical_features: list = [],
+        generate_synthetic_data: bool = False,
+        num_samples_synthetic: int = 10_000,
+        estimators: tuple[str, BaseEstimator] = (),
     ):
         self.objective = objective
         self.data = data
-        self.samples_synthetic = 10_000
         self.target_column = target_column
-        self.vote_threshold = vote_threshold
+        self.test_size = test_size
+        self.numeric_features = numeric_features
+        self.feature_set = numeric_features + categorical_features
+        self.categorical_features = categorical_features
+        self.generate_synthetic_data = generate_synthetic_data
+        self.num_samples_synthetic = num_samples_synthetic
         self.estimators = estimators
-        assert self.objective in (
-            "classification",
-            "regression",
-        ), "objective must be 'classification' or 'regression'"
-        logger.info(
-            f"Class object {self.__class__.__name__} instantiated successfully with the following parameters:"
-        )
-        logger.info(
-            f"\t objective: {self.objective}, threshold: {self.vote_threshold}, estimators: {self.estimators}"
-        )
+        self.categorical_transformer = Pipeline(steps=[])
+        self.numeric_transformer = Pipeline(steps=[])
+        self.column_transformer = ColumnTransformer(transformers=[])
+        self.X_train = pd.DataFrame({})
+        self.X_test = pd.DataFrame({})
+        self.y_train = pd.DataFrame({})
+        self.y_test = pd.DataFrame({})
+        msg = "objective must be classification or regression"
+        assert self.objective in ("classification", "regression"), msg
+        logger.info(f"Class object {self.__class__.__name__} instantiated successfully")
 
     def _generate_data(self):
-        if self.data.empty:
-            logger.info("No data was provided.  Generating synthetic data.")
+        if self.generate_synthetic_data:
+            logger.info("Generate synthetic data elected")
             if self.objective == "classification":
-                X, y = make_classification(n_samples=self.samples_synthetic)
+                logger.info(
+                    f"\t Generating data for classification with num-samples {self.num_samples_synthetic}"
+                )
+                X, y = make_classification(n_samples=self.num_samples_synthetic)
                 data = pd.DataFrame(
                     X, columns=[f"feature_{i}" for i in range(X.shape[1])]
                 )
                 data[self.target_column] = y
+                self.feature_set = data.columns
+                self.numeric_features = data.columns[:10]
+                self.categorical_features = data.columns[10:-1]
                 logger.info(
-                    f"Data shape: {data.shape}, X shape: {X.shape}, y shape: {y.shape}"
+                    f"\t Data shape: {data.shape}, X shape: {X.shape}, y shape: {y.shape}"
                 )
                 self.data = data
             else:
-                X, y = make_regression(n_samples=self.samples_synthetic)
+                logger.info(
+                    f"\t Generating data for regression with num-samples {self.num_samples_synthetic}"
+                )
+                X, y = make_regression(n_samples=self.num_samples_synthetic)
                 data = pd.DataFrame(
                     X, columns=[f"feature_{i}" for i in range(X.shape[1])]
                 )
                 data[self.target_column] = y
+                self.feature_set = data.columns
+                self.numeric_features = data.columns[:10]
+                self.categorical_features = data.columns[10:-1]
+                logger.info(
+                    f"\t Data shape: {data.shape}, X shape: {X.shape}, y shape: {y.shape}"
+                )
                 self.data = data
+        return self
+
+    def _build_categorical_transformer(self):
+        logger.info("Building the categorical transformer.")
+        self.categorical_transformer = Pipeline(
+            steps=[
+                ("imputer", SimpleImputer(strategy="most_frequency")),
+                ("encoder", CountEncoder(handle_unknown="return_nan")),
+            ]
+        )
+        return self
+
+    def _build_numeric_transformer(self):
+        logger.info("Building the numeric transformer.")
+        self.numeric_transformer = Pipeline(
+            steps=[
+                ("imputer", SimpleImputer(strategy="median")),
+                ("scaler", StandardScaler()),
+            ]
+        )
+        return self
+
+    def _build_column_transformer(self):
+        logger.info("Building the column transformer.")
+        self.column_transformer = ColumnTransformer(
+            transformers=[
+                ("num", self.numeric_transformer, self.numeric_features),
+                ("cat", self.categorical_transformer, self.categorical_features),
+            ]
+        )
+        return self
+
+    def _generate_train_test_split(self):
+        logger.info("Generating the train test split.")
+        X = self.data[self.feature_set]
+        y = self.data[self.target_column]
+        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+            X, y, test_size=self.test_size, stratified=y
+        )
         return self
 
     def fit(self):
         logger.info("Fitting the model.")
         self._generate_data()
+        self._generate_train_test_split()
+        self._build_categorical_transformer()
+        self._build_numeric_transformer()
+        self._build_column_transformer()
+        return self
+
+    def transform_data(self):
+        logger.info("Transforming the data.")
+        self.X_train = self.column_transformer.fit_transform(self.X_train)
+        self.X_test = self.column_transformer.transform(self.X_test)
+        return self
+
+    def fit_transform(self):
+        logger.info("Fitting and transforming the model.")
+        self.fit()
+        self.transform_data()
         return self
 
 
+class FeatureImportanceRegression:
+    def __init(self):
+        pass
+
+
+class FeatureImportanceClassification:
+    def __init(self):
+        pass
+
+
 if __name__ == "__main__":
-    mvfi = MajorityVoteFeatureImportance()
+    mvfi = BaseClass(generate_synthetic_data=True, objective="classification")
     mvfi.fit()
