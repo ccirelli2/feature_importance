@@ -252,6 +252,7 @@ class FeatureImportanceClassification(FeatureImportanceBaseClass):
     - _generate_train_test_split(self)
     - _calculate_importance(self, importance_df)
     - _total_votes(self, importance_df)
+    # TODO: Add evaluation metrics for classification models.
     """
 
     def __init(self):
@@ -269,8 +270,8 @@ class FeatureImportanceClassification(FeatureImportanceBaseClass):
             )
             # Define Feature Sets
             self.feature_set = [f"feature_{i}" for i in range(self.X.shape[1])]
-            self.categorical_features = self.feature_set[: int(self.X.shape[1])]
-            self.numeric_features = self.feature_set[int(self.X.shape[1]) :]
+            self.categorical_features = self.feature_set[: int(self.X.shape[1] / 2)]
+            self.numeric_features = self.feature_set[int(self.X.shape[1] / 2) :]
         else:
             self.y = self.data[self.target_column]
             self.X = self.data.drop(self.target_column, axis=1)
@@ -282,7 +283,11 @@ class FeatureImportanceClassification(FeatureImportanceBaseClass):
             [f for f in self.numeric_features if f in self.feature_set],
             [f for f in self.categorical_features if f in self.feature_set],
         ]
-        assert all(conditions), "Features not found in feature set."
+        assert all(
+            conditions
+        ), "Features not found in feature set. \n Feautre Set {}\n Numeric {}, \n Categorical {}".format(
+            self.feature_set, self.numeric_features, self.categorical_features
+        )
 
         return self
 
@@ -389,9 +394,9 @@ class FeatureImportanceRegression(FeatureImportanceBaseClass):
         - _calculate_importance(self, importance_df)
         - _total_votes(self, importance_df)
 
+    # TODO: Add evaluation metrics for regression models.
     """
 
-    # TODO: Add regression metrics
     def __init(self):
         self.objective = "regression"
         super().__init__()
@@ -405,8 +410,8 @@ class FeatureImportanceRegression(FeatureImportanceBaseClass):
 
             # Define Feature Sets
             self.feature_set = [f"feature_{i}" for i in range(self.X.shape[1])]
-            self.categorical_features = self.feature_set[: int(self.X.shape[1])]
-            self.numeric_features = self.feature_set[int(self.X.shape[1]) :]
+            self.categorical_features = self.feature_set[: int(self.X.shape[1] / 2)]
+            self.numeric_features = self.feature_set[int(self.X.shape[1] / 2) :]
         else:
             self.y = self.data[self.target_column]
             self.X = self.data.drop(self.target_column, axis=1)

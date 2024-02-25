@@ -1,4 +1,17 @@
-from src import feature_importance
+import os
+import logging
+
+from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestClassifier
+from lightgbm import LGBMClassifier, LGBMRegressor
+
+from src.feature_importance import (
+    FeatureImportanceClassification,
+    FeatureImportanceRegression,
+)
+
+logging.basicConfig(level=logging.INFO)
+
 
 if __name__ == "__main__":
     # Classification Implementation
