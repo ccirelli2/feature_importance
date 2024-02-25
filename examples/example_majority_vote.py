@@ -408,17 +408,18 @@ class FeatureImportanceRegression(BaseClass):
 
 
 if __name__ == "__main__":
-    # f_imp_clf = FeatureImportanceClassification(
-    #     num_samples_synthetic=1000,
-    #     plot_importance=False,
-    #     generate_synthetic_data=True,
-    #     objective="classification",
-    #     estimators=[
-    #         ("RandomForestClassifier", RandomForestClassifier())]
-    # )
-    #
-    # f_imp_clf.fit_transform()
-    # print(f_imp_clf.estimator_feature_importance)
+    f_imp_clf = FeatureImportanceClassification(
+        num_samples_synthetic=1000,
+        plot_importance=False,
+        generate_synthetic_data=True,
+        objective="classification",
+        estimators=(
+            ("RandomForestClassifier", RandomForestClassifier()),
+            ("LGBMClassifier", LGBMClassifier()),
+        ),
+    )
+
+    f_imp_clf.fit_transform()
 
     f_imp_reg = FeatureImportanceRegression(
         num_samples_synthetic=1000,
@@ -431,4 +432,3 @@ if __name__ == "__main__":
         ),
     )
     f_imp_reg.fit_transform()
-    print(f_imp_reg.feature_importance_df)

@@ -1526,3 +1526,23 @@
 2024-02-25 12:10:46,816 [MainThread  ] [INFO ]  Joining feature importance data.
 2024-02-25 12:10:46,817 [MainThread  ] [INFO ]  Median value for LGBMRegressor is 0.4232515272695836
 2024-02-25 12:10:46,817 [MainThread  ] [INFO ]  Median value for LinearRegression is 1.6935655424911247e-14
+2024-02-25 12:12:21,500 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 12:12:21,500 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 12:12:21,500 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 12:12:21,500 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 12:12:21,500 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 12:12:21,501 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 12:12:21,501 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 12:12:21,501 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 12:12:21,501 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 12:12:21,501 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 12:12:21,501 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 12:12:21,501 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 12:12:21,502 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 12:12:21,506 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 12:12:21,506 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 12:12:21,579 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 12:12:22,300 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 12:12:22,303 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 12:12:22,303 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMClassifier.
+2024-02-25 12:12:22,848 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMClassifier
