@@ -452,7 +452,7 @@ class FeatureImportanceRegression(FeatureImportanceBaseClass):
         mean_abs_importance = shap_abs.mean(axis=0)
         # Plot
         if self.plot_importance:
-            summary_plot(shap_values, self.X_test)
+            shap.summary_plot(shap_values, self.X_test)
         # Create the DataFrame
         importance_df = pd.DataFrame(
             {
