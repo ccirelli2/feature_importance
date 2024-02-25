@@ -464,7 +464,7 @@ class FeatureImportanceRegression(FeatureImportanceBaseClass):
 
     def _build(self):
         assert self.estimators, "No estimators found."
-        logger.info("Building Estimators.")
+        logger.info("Building Estimators & Generating Feature Importance")
         for name, pipeline in self.estimator_pipelines.items():
             # Fit Estimator
             logger.info(f"\t Fitting Estimator {name}.")
