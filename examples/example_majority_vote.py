@@ -7,16 +7,16 @@ import git
 from uuid import uuid4
 import pandas as pd
 import numpy as np
-from typing import Dict, Union
+from typing import Dict, Union, List
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split
 from category_encoders.count import CountEncoder
-from sklearn.base import BaseEstimator
-
-from abc import ABC, abstractmethod
+from sklearn.base import BaseEstimator, ClassifierMixin, RegressorMixin
+import shap
+from shap import KernelExplainer, summary_plot
 
 # Data
 from sklearn.datasets import make_classification, make_regression
@@ -29,6 +29,7 @@ from sklearn.impute import SimpleImputer
 # Modeling
 from lightgbm import LGBMClassifier, LGBMRegressor
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LinearRegression
 
 # Project
 from src import utils
@@ -46,7 +47,7 @@ logger = utils.Logger(
 ).get_logger()
 
 
-class BaseClass(ABC):
+class BaseClass:
     """
     Base class for building and evaluating machine learning models.
 
@@ -85,28 +86,29 @@ class BaseClass(ABC):
 
     Raises:
         AssertionError: If the objective is not 'classification' or 'regression'.
-        NotImplementedError: If the class is instantiated directly.
     """
 
-    @abstractmethod
     def __init__(
         self,
         objective: str = "classification",
         data: pd.DataFrame = pd.DataFrame(),
         target_column: str = "TARGET",
+        plot_importance: bool = False,
         test_size: float = 0.33,
         numeric_features: list = [],
         categorical_features: list = [],
         generate_synthetic_data: bool = False,
         num_samples_synthetic: int = 10_000,
-        estimators: tuple[str, BaseEstimator] = (),
+        estimators: List[
+            tuple[str, Union[BaseEstimator, ClassifierMixin, RegressorMixin]]
+        ] = (),
     ):
         self.objective = objective
         self.data = data
         self.target_column = target_column
         self.test_size = test_size
         self.numeric_features = numeric_features
-        self.feature_set = numeric_features + categorical_features
+        self.feature_set: list = []
         self.categorical_features = categorical_features
         self.generate_synthetic_data = generate_synthetic_data
         self.num_samples_synthetic = num_samples_synthetic
@@ -116,12 +118,16 @@ class BaseClass(ABC):
         self.column_transformer = ColumnTransformer(transformers=[])
         self.estimator_pipelines: Dict[str, Union[BaseEstimator, Pipeline]] = {}
         self.estimator_predictions: Dict[str, np.ndarray] = {}
+        self.estimator_feature_importance: Dict[str, pd.DataFrame] = {}
+        self.feature_importance_df = pd.DataFrame()
+        self.plot_importance = plot_importance
         self.X_train = pd.DataFrame({})
         self.X_test = pd.DataFrame({})
         self.y_train = pd.DataFrame({})
         self.y_test = pd.DataFrame({})
         msg = "objective must be classification or regression"
         assert self.objective in ("classification", "regression"), msg
+        # assert len(self.estimators) > 2, "No estimators found."
         logger.info(f"Class object {self.__class__.__name__} instantiated successfully")
 
     def _generate_data(self):
@@ -131,54 +137,59 @@ class BaseClass(ABC):
                 logger.info(
                     f"\t Generating data for classification with num-samples {self.num_samples_synthetic}"
                 )
-                X, y = make_classification(n_samples=self.num_samples_synthetic)
-                data = pd.DataFrame(
-                    X, columns=[f"feature_{i}" for i in range(X.shape[1])]
+                self.X, self.y = make_classification(
+                    n_samples=self.num_samples_synthetic
                 )
-                data[self.target_column] = y
-                self.feature_set = data.columns.tolist()
-                self.numeric_features = self.feature_set[:10]
-                self.categorical_features = self.feature_set[10:-1]
-                logger.info(
-                    f"\t Data shape: {data.shape}, X shape: {X.shape}, y shape: {y.shape}"
-                )
-                self.data = data
+
             else:
                 logger.info(
                     f"\t Generating data for regression with num-samples {self.num_samples_synthetic}"
                 )
-                X, y = make_regression(n_samples=self.num_samples_synthetic)
-                data = pd.DataFrame(
-                    X, columns=[f"feature_{i}" for i in range(X.shape[1])]
-                )
-                data[self.target_column] = y
-                self.feature_set = data.columns.tolist()
-                self.numeric_features = self.feature_set[:10]
-                self.categorical_features = self.feature_set[10:-1]
-                logger.info(
-                    f"\t Data shape: {data.shape}, X shape: {X.shape}, y shape: {y.shape}"
-                )
-                self.data = data
+                self.X, self.y = make_regression(n_samples=self.num_samples_synthetic)
+
+            # Define Feature Sets
+            self.feature_set = [f"feature_{i}" for i in range(self.X.shape[1])]
+            self.categorical_features = self.feature_set[: int(self.X.shape[1])]
+            self.num_features = self.feature_set[int(self.X.shape[1]) :]
+            return self
+
+    def _split_x_y(self):
+        if not self.generate_synthetic_data:
+            self.y = self.data[self.target_column]
+            self.X = self.data.drop(self.target_column, axis=1)
+            self.feature_set = self.X.columns.tolist()
+            assert all(
+                [f for f in self.num_features if f in self.feature_set]
+            ), "Numeric features not found in feature set."
+            assert all(
+                [f for f in self.categorical_features if f in self.feature_set]
+            ), "Categorical features not found in feature set."
+            logger.info(
+                f"\t Data shape: {self.data.shape}, X shape: {self.X.shape}, y shape: {self.y.shape}"
+            )
         return self
 
     def _generate_train_test_split(self):
         logger.info("Generating the train test split.")
-        X = self.data[self.feature_set]
-        y = self.data[self.target_column]
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
-            X, y, test_size=self.test_size, stratify=y
-        )
+        if self.objective == "classification":
+            self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+                self.X, self.y, test_size=self.test_size, stratify=self.y
+            )
+        else:
+            self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+                self.X, self.y, test_size=self.test_size
+            )
         return self
 
-    def build_categorical_column_transformer(self):
+    def _build_categorical_column_transformer(self):
         logger.info("Building the categorical transformer.")
-        cat_features = [self.feature_set.index(f) for f in self.categorical_features]
         self.categorical_transformer = Pipeline(
             steps=[
                 (
                     "encoder",
                     CountEncoder(handle_unknown="value", handle_missing="value"),
-                )
+                ),
+                ("imputer", SimpleImputer(strategy="most_frequent")),
             ]
         )
         return self
@@ -217,7 +228,6 @@ class BaseClass(ABC):
         for name, estimator in self.estimators:
             conditions = [
                 hasattr(estimator, "predict"),
-                hasattr(estimator, "predict_proba"),
                 hasattr(estimator, "fit"),
             ]
             if not all(conditions):
@@ -234,63 +244,191 @@ class BaseClass(ABC):
                 )
         return self
 
-    def _generate_estimator_predictions(self):
+    def _generate_feature_importance(self, pipeline: Pipeline, name: str):
+        """
+        Calculates and returns feature importance using SHAP for the given pipeline.
+
+        Args:
+            pipeline: A scikit-learn pipeline containing the trained model.
+
+        Returns:
+            pandas.DataFrame: A DataFrame with two columns:
+                - "feature": The feature name.
+                - "shap_value": The SHAP value for feature importance.
+        """
+        logger.info(f"\t Generating feature importance for {name}")
+        # Access the final estimator from the pipeline
+        estimator = pipeline.named_steps["estimator"]
+        # Create an Explainer for the estimator and obtain shap values
+        explainer = shap.Explainer(estimator, self.X_train)
+        shap_values = explainer(self.X_test).values
+        # Extract feature names from the explainer
+        feature_names = explainer.feature_names
+        # Calculate average SHAP values (absolute or mean, choose based on your preference)
+        shap_abs = np.abs(shap_values)  # Calculate absolute values
+        mean_abs_importance = shap_abs.mean(axis=0)
+        if self.objective == "classification":
+            # shap returns feature importance by class label.  mean abs results in the same value per clas.
+            # here we are just taking the average across rows [[1, 1,]], which will return the same value of one row.
+            mean_abs_importance = mean_abs_importance.mean(axis=1)
+
+        # Plot
+        if self.plot_importance:
+            summary_plot(shap_values, self.X_test)
+
+        # Create the DataFrame
+        importance_df = pd.DataFrame(
+            {
+                f"{name}_IMPORTANCE": mean_abs_importance,
+            },
+            index=self.feature_set,
+        )
+        return importance_df
+
+    def _join_feature_importance(self):
+        """
+        Joins the feature importance dataframes for each estimator into a single dataframe.
+
+        Returns:
+            pandas.DataFrame: A DataFrame containing the joined feature importance data.
+        """
+        logger.info("Joining feature importance data.")
+        # Create a list of dataframes from the feature importance dictionary
+        dfs = [df for df in self.estimator_feature_importance.values()]
+        # Join the dataframes
+        self.feature_importance_df = pd.concat(dfs, axis=1)
+        # Rename the columns
+        self.feature_importance_df.columns = [
+            f"{k}" for k in self.estimator_feature_importance.keys()
+        ]
+        return self
+
+    def _build(self):
         assert self.estimators, "No estimators found."
-        logger.info("Generating predictions.")
+        logger.info("Building Estimators.")
         for name, pipeline in self.estimator_pipelines.items():
-            logger.info(f"\t Generating predictions for {name}")
+            # Fit Estimator
+            logger.info(f"\t Fitting Estimator {name}.")
             pipeline.fit(self.X_train, self.y_train)
+            # # Generate Feature Importance
+            self.estimator_feature_importance[name] = self._generate_feature_importance(
+                pipeline, name
+            )
+            # Generate Predictions
+            logger.info(f"\t Generating Predictions for {name}.")
             self.estimator_predictions[name] = pipeline.predict(self.X_test)
             logger.info(f"\t\t Predictions for {name} generated successfully.")
+        return self
+
+    def _calculate_importance(self):
+        for model_name in self.feature_importance_df.columns:
+            # Calculate Median Importance Value
+            model_median_val = self.feature_importance_df[model_name].median()
+            logger.info(f"Median value for {model_name} is {model_median_val}")
+
+            # Create Significance Flag
+            self.feature_importance_df[f"{model_name}_IS_SIGNIFICANT"] = list(
+                map(
+                    lambda x: 1 if x >= model_median_val else 0,
+                    self.feature_importance_df[model_name],
+                )
+            )
+        return self
+
+    def _total_votes(self):
+        """
+        Calculate total significance votes.
+        """
+        significance_columns = [
+            c for c in self.feature_importance_df.columns if "IS_SIGNIFICANT" in c
+        ]
+        self.feature_importance_df["TOTAL_VOTES"] = (
+            self.feature_importance_df[significance_columns].sum(axis=1).values
+        )
+        return self
+
+    def _majority_vote(self):
+        """
+        Function to create a majority vote column.
+        If N-1 models agree a feature is important then 1 else 0.
+        """
+        self.feature_importance_df["IS_MAJORITY"] = list(
+            map(
+                lambda x: 1
+                if x >= (len(self.estimator_feature_importance.keys()) - 1)
+                else 0,
+                self.feature_importance_df["TOTAL_VOTES"],
+            )
+        )
         return self
 
     def fit(self):
         logger.info("Fitting the model.")
         self._generate_data()
+        self._split_x_y()
         self._generate_train_test_split()
-        self.build_categorical_column_transformer()
+        self._build_categorical_column_transformer()
         self._build_numeric_column_transformer()
         self._build_final_column_transformer()
         self._build_estimator_pipelines()
+        self._total_votes()
         return self
 
-    def transform_data(self):
+    def transform(self):
         logger.info("Transforming the data.")
         self.X_train = self.column_transformer.fit_transform(self.X_train)
         self.X_test = self.column_transformer.transform(self.X_test)
+        self._build()
+        self._join_feature_importance()
+        self._calculate_importance()
+        self._total_votes()
+        self._majority_vote()
         return self
 
     def fit_transform(self):
         logger.info("Fitting and transforming the model.")
         self.fit()
-        self.transform_data()
-        self._generate_estimator_predictions()
+        self.transform()
         return self
 
 
-class FeatureImportanceClassification:
+class FeatureImportanceClassification(BaseClass):
     def __init(self):
-        pass
+        super().__init__()
 
 
-class FeatureImportanceRegression:
+class FeatureImportanceRegression(BaseClass):
     """
     We need to separate the feature importance for classification and regression models because the
     evaluation metrics and feature importance will be different.
     """
 
     def __init(self):
-        pass
+        super().__init__()
 
 
 if __name__ == "__main__":
-    mvfi = BaseClass(
+    # f_imp_clf = FeatureImportanceClassification(
+    #     num_samples_synthetic=1000,
+    #     plot_importance=False,
+    #     generate_synthetic_data=True,
+    #     objective="classification",
+    #     estimators=[
+    #         ("RandomForestClassifier", RandomForestClassifier())]
+    # )
+    #
+    # f_imp_clf.fit_transform()
+    # print(f_imp_clf.estimator_feature_importance)
+
+    f_imp_reg = FeatureImportanceRegression(
+        num_samples_synthetic=1000,
+        plot_importance=False,
         generate_synthetic_data=True,
-        objective="classification",
+        objective="regression",
         estimators=(
-            ("RandomForestClassifier", RandomForestClassifier()),
-            ("LGBMClassifier", LGBMClassifier()),
+            ("LGBMRegressor", LGBMRegressor()),
+            ("LinearRegression", LinearRegression()),
         ),
     )
-
-    mvfi.fit_transform()
+    f_imp_reg.fit_transform()
+    print(f_imp_reg.feature_importance_df)

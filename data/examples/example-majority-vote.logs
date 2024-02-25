@@ -197,3 +197,1332 @@
 2024-02-20 20:36:57,127 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
 2024-02-20 20:36:57,128 [MainThread  ] [INFO ]  	 Generating predictions for LGBMClassifier
 2024-02-20 20:36:57,733 [MainThread  ] [INFO ]  		 Predictions for LGBMClassifier generated successfully.
+2024-02-25 09:42:55,539 [MainThread  ] [INFO ]  Class object BaseClass instantiated successfully
+2024-02-25 09:42:55,539 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 09:42:55,539 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 09:42:55,539 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 09:42:55,539 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 09:42:55,543 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 09:42:55,543 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 09:42:55,546 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 09:42:55,546 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 09:42:55,546 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 09:42:55,546 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 09:42:55,546 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 09:42:55,546 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 09:42:55,546 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 09:42:55,553 [MainThread  ] [INFO ]  Generating predictions.
+2024-02-25 09:42:55,553 [MainThread  ] [INFO ]  	 Generating predictions for RandomForestClassifier
+2024-02-25 09:42:56,677 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 09:42:56,677 [MainThread  ] [INFO ]  	 Generating predictions for LGBMClassifier
+2024-02-25 09:42:57,297 [MainThread  ] [INFO ]  		 Predictions for LGBMClassifier generated successfully.
+2024-02-25 09:44:56,616 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 09:44:56,616 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 09:44:56,616 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 09:44:56,616 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 09:44:56,616 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 09:44:56,620 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 09:44:56,620 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 09:44:56,622 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 09:44:56,622 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 09:44:56,622 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 09:44:56,622 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 09:44:56,622 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 09:44:56,622 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 09:44:56,622 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 09:44:56,631 [MainThread  ] [INFO ]  Generating predictions.
+2024-02-25 09:44:56,631 [MainThread  ] [INFO ]  	 Generating predictions for RandomForestClassifier
+2024-02-25 09:44:57,924 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 09:44:57,924 [MainThread  ] [INFO ]  	 Generating predictions for LGBMClassifier
+2024-02-25 09:44:58,531 [MainThread  ] [INFO ]  		 Predictions for LGBMClassifier generated successfully.
+2024-02-25 10:26:31,277 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:26:31,278 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:26:31,278 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:26:31,278 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:26:31,278 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:26:31,282 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:26:31,282 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:26:31,284 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:26:31,284 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:26:31,284 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:26:31,284 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:26:31,284 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:26:31,284 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:26:31,284 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:26:31,296 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:26:31,296 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:26:32,558 [MainThread  ] [INFO ]  	 Generating Feature Importance for RandomForestClassifier.
+2024-02-25 10:29:56,700 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:29:56,700 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:29:56,700 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:29:56,700 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:29:56,700 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:29:56,704 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:29:56,704 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:29:56,706 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:29:56,706 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:29:56,706 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:29:56,707 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:29:56,707 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:29:56,707 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:29:56,707 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:29:56,719 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:29:56,719 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:29:57,862 [MainThread  ] [INFO ]  	 Generating Feature Importance for RandomForestClassifier.
+2024-02-25 10:31:28,343 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:31:28,343 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:31:28,343 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:31:28,343 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:31:28,343 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:31:28,348 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:31:28,349 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:31:28,352 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:31:28,352 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:31:28,352 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:31:28,352 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:31:28,352 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:31:28,352 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:31:28,352 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:31:28,371 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:31:28,371 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:31:29,539 [MainThread  ] [INFO ]  	 Generating Feature Importance for RandomForestClassifier.
+2024-02-25 10:33:04,552 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:33:04,552 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:33:04,552 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:33:04,552 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:33:04,552 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:33:04,556 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:33:04,556 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:33:04,558 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:33:04,558 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:33:04,558 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:33:04,558 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:33:04,558 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:33:04,558 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:33:04,558 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:33:04,571 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:33:04,571 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:33:05,914 [MainThread  ] [INFO ]  	 Generating Feature Importance for RandomForestClassifier.
+2024-02-25 10:34:29,219 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:34:29,219 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:34:29,219 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:34:29,219 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:34:29,219 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:34:29,223 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:34:29,223 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:34:29,225 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:34:29,225 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:34:29,225 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:34:29,225 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:34:29,225 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:34:29,225 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:34:29,225 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:34:29,237 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:34:29,237 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:34:30,556 [MainThread  ] [INFO ]  	 Generating Feature Importance for RandomForestClassifier.
+2024-02-25 10:37:55,783 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:37:55,783 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:37:55,783 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:37:55,783 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:37:55,783 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:37:55,787 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:37:55,788 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:37:55,790 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:37:55,790 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:37:55,790 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:37:55,790 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:37:55,790 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:37:55,790 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:37:55,790 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:37:55,802 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:37:55,802 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:38:28,723 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:38:28,723 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:38:28,723 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:38:28,723 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:38:28,723 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:38:28,727 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:38:28,727 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:38:28,729 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:38:28,729 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:38:28,729 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:38:28,729 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:38:28,729 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:38:28,729 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:38:28,729 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:38:28,741 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:38:28,741 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:39:21,675 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:39:21,675 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:39:21,675 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:39:21,675 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:39:21,675 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:39:21,679 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:39:21,679 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:39:21,681 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:39:21,681 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:39:21,681 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:39:21,681 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:39:21,681 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:39:21,681 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:39:21,681 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:39:21,693 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:39:21,693 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:39:31,239 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:39:31,239 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:39:31,239 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:39:31,239 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:39:31,239 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:39:31,243 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:39:31,243 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:39:31,245 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:39:31,245 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:39:31,245 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:39:31,245 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:39:31,245 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:39:31,245 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:39:31,245 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:39:31,257 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:39:31,257 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:39:32,489 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 10:39:32,508 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 10:39:32,508 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMClassifier.
+2024-02-25 10:39:33,119 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMClassifier.
+2024-02-25 10:39:33,123 [MainThread  ] [INFO ]  		 Predictions for LGBMClassifier generated successfully.
+2024-02-25 10:40:14,743 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:40:14,744 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:40:14,744 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:40:14,744 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:40:14,744 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:40:14,748 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:40:14,748 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:40:14,750 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:40:14,750 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:40:14,750 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:40:14,750 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:40:14,750 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:40:14,750 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:40:14,750 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:40:14,763 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:40:14,763 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:40:38,984 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:40:38,984 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:40:38,984 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:40:38,984 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:40:38,984 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:40:38,988 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:40:38,988 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:40:38,990 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:40:38,990 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:40:38,990 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:40:38,990 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:40:38,990 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:40:38,990 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:40:38,990 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:40:39,002 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:40:39,002 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:40:54,948 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:40:54,948 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:40:54,948 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:40:54,948 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:40:54,948 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:40:54,952 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:40:54,952 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:40:54,954 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:40:54,954 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:40:54,954 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:40:54,954 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:40:54,954 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:40:54,954 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:40:54,954 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:40:54,966 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:40:54,966 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:40:55,971 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 10:40:55,983 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 10:40:55,983 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMClassifier.
+2024-02-25 10:40:56,601 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMClassifier.
+2024-02-25 10:40:56,605 [MainThread  ] [INFO ]  		 Predictions for LGBMClassifier generated successfully.
+2024-02-25 10:41:13,699 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:41:13,699 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:41:13,699 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:41:13,699 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:41:13,699 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:41:13,703 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:41:13,703 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:41:13,705 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:41:13,705 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:41:13,705 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:41:13,705 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:41:13,705 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:41:13,705 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:41:13,705 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:41:13,717 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:41:13,717 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:41:15,076 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 10:41:15,096 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 10:41:15,096 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMClassifier.
+2024-02-25 10:41:15,705 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMClassifier.
+2024-02-25 10:41:15,709 [MainThread  ] [INFO ]  		 Predictions for LGBMClassifier generated successfully.
+2024-02-25 10:44:16,355 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:44:16,355 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:44:16,355 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:44:16,355 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:44:16,355 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:44:16,359 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:44:16,359 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:44:16,361 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:44:16,361 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:44:16,361 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:44:16,361 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:44:16,361 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:44:16,361 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:44:16,361 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:44:16,373 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:44:16,373 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:44:17,693 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 10:44:17,707 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 10:44:17,707 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMClassifier.
+2024-02-25 10:44:18,395 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMClassifier.
+2024-02-25 10:44:18,399 [MainThread  ] [INFO ]  		 Predictions for LGBMClassifier generated successfully.
+2024-02-25 10:51:19,685 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:51:19,685 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:51:19,685 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:51:19,685 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:51:19,685 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:51:19,689 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:51:19,689 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:51:19,691 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:51:19,691 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:51:19,691 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:51:19,691 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:51:19,691 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:51:19,691 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:51:19,692 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:51:19,703 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:51:19,704 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:51:20,907 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 10:51:20,921 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 10:51:20,922 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMClassifier.
+2024-02-25 10:51:21,606 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMClassifier.
+2024-02-25 10:51:21,610 [MainThread  ] [INFO ]  		 Predictions for LGBMClassifier generated successfully.
+2024-02-25 10:51:39,417 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:51:39,417 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:51:39,417 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:51:39,417 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:51:39,417 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:51:39,421 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:51:39,421 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:51:39,423 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:51:39,423 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:51:39,423 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:51:39,423 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:51:39,423 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:51:39,423 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:51:39,423 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:51:39,435 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:51:39,435 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:51:40,738 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 10:51:40,756 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 10:51:40,756 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMClassifier.
+2024-02-25 10:51:41,438 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMClassifier.
+2024-02-25 10:51:41,442 [MainThread  ] [INFO ]  		 Predictions for LGBMClassifier generated successfully.
+2024-02-25 10:54:25,430 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:54:25,430 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:54:25,430 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:54:25,430 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:54:25,430 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:54:25,434 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:54:25,434 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:54:25,436 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:54:25,436 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:54:25,436 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:54:25,436 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:54:25,436 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:54:25,436 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:54:25,436 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:54:25,448 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:54:25,448 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:54:26,552 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 10:54:26,565 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 10:54:26,565 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMClassifier.
+2024-02-25 10:54:27,252 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMClassifier.
+2024-02-25 10:54:27,256 [MainThread  ] [INFO ]  		 Predictions for LGBMClassifier generated successfully.
+2024-02-25 10:54:59,698 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:54:59,698 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:54:59,698 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:54:59,698 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:54:59,698 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:54:59,703 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:54:59,703 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:54:59,705 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:54:59,705 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:54:59,705 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:54:59,705 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:54:59,705 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:54:59,705 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:54:59,705 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:54:59,718 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:54:59,718 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:56:16,693 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:56:16,693 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:56:16,693 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:56:16,693 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:56:16,693 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:56:16,698 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:56:16,698 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:56:16,700 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:56:16,700 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:56:16,700 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:56:16,700 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:56:16,700 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:56:16,700 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:56:16,700 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:56:16,714 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:56:16,714 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:56:18,196 [MainThread  ] [INFO ]  Generating feature importance for RandomForestClassifier
+2024-02-25 10:58:17,349 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:58:17,349 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:58:17,349 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:58:17,349 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:58:17,349 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 10000
+2024-02-25 10:58:17,353 [MainThread  ] [INFO ]  	 Data shape: (10000, 21), X shape: (10000, 20), y shape: (10000,)
+2024-02-25 10:58:17,353 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:58:17,355 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:58:17,355 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:58:17,355 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:58:17,355 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:58:17,355 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:58:17,355 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:58:17,355 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:58:17,367 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:58:17,367 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:58:18,620 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 10:58:44,450 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 10:58:44,450 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 10:58:44,450 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 10:58:44,450 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 10:58:44,450 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 10:58:44,452 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 10:58:44,452 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 10:58:44,453 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 10:58:44,453 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 10:58:44,453 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 10:58:44,453 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 10:58:44,453 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 10:58:44,453 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 10:58:44,453 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 10:58:44,458 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 10:58:44,458 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 10:58:44,554 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:00:42,933 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:00:42,933 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:00:42,933 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:00:42,933 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:00:42,933 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:00:42,935 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:00:42,935 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:00:42,936 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:00:42,936 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:00:42,936 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:00:42,936 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:00:42,936 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:00:42,936 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 11:00:42,936 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:00:42,941 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:00:42,942 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:00:43,028 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:01:58,020 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:01:58,021 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:01:58,021 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:01:58,021 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:01:58,021 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:01:58,022 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:01:58,022 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:01:58,023 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:01:58,023 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:01:58,023 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:01:58,023 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:01:58,023 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:01:58,023 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 11:01:58,023 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:01:58,028 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:01:58,028 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:01:58,120 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:02:57,876 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:02:57,876 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:02:57,876 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:02:57,876 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:02:57,876 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:02:57,878 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:02:57,878 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:02:57,879 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:02:57,879 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:02:57,879 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:02:57,879 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:02:57,879 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:02:57,879 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 11:02:57,879 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:02:57,884 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:02:57,884 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:02:57,974 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:03:00,068 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:03:00,071 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:03:00,071 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMClassifier.
+2024-02-25 11:03:00,573 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMClassifier
+2024-02-25 11:03:01,502 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMClassifier.
+2024-02-25 11:03:01,503 [MainThread  ] [INFO ]  		 Predictions for LGBMClassifier generated successfully.
+2024-02-25 11:03:15,040 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:03:15,040 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:03:15,040 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:03:15,040 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:03:15,040 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:03:15,042 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:03:15,042 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:03:15,043 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:03:15,043 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:03:15,043 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:03:15,043 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:03:15,043 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:03:15,043 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 11:03:15,043 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:03:15,049 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:03:15,049 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:03:15,119 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:03:15,763 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:03:15,766 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:03:15,766 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMClassifier.
+2024-02-25 11:03:16,272 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMClassifier
+2024-02-25 11:03:17,154 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMClassifier.
+2024-02-25 11:03:17,156 [MainThread  ] [INFO ]  		 Predictions for LGBMClassifier generated successfully.
+2024-02-25 11:03:38,610 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:03:38,610 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:03:38,610 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:03:38,610 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:03:38,610 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:03:38,611 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:03:38,611 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:03:38,612 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:03:38,613 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:03:38,613 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:03:38,613 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:03:38,613 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:03:38,613 [MainThread  ] [INFO ]  		 Adding Estimator LGBMClassifier
+2024-02-25 11:03:38,613 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:03:38,618 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:03:38,618 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:03:38,699 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:03:39,888 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:03:39,891 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:03:39,891 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMClassifier.
+2024-02-25 11:03:40,416 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMClassifier
+2024-02-25 11:03:41,368 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMClassifier.
+2024-02-25 11:03:41,370 [MainThread  ] [INFO ]  		 Predictions for LGBMClassifier generated successfully.
+2024-02-25 11:05:02,735 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:05:02,735 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:05:02,736 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:05:02,736 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:05:02,736 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:05:02,737 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:05:02,737 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:05:02,738 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:05:02,738 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:05:02,738 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:05:02,738 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:05:02,738 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:05:02,738 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 11:05:02,738 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:05:02,743 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:05:02,743 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:05:02,823 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:05:04,047 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:05:04,050 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:05:04,050 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 11:05:04,054 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 11:05:04,065 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 11:05:04,067 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 11:06:31,212 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:06:31,212 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:06:31,212 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:06:31,212 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:06:31,212 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:06:31,213 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:06:31,213 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:06:31,214 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:06:31,214 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:06:31,214 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:06:31,214 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:06:31,214 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:06:31,214 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 11:06:31,214 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:06:31,219 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:06:31,219 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:06:31,297 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:06:32,266 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:06:32,269 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:06:32,269 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 11:06:32,272 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 11:06:32,276 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 11:06:32,277 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 11:07:06,061 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:07:06,062 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:07:06,062 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:07:06,062 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:07:06,062 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:07:06,063 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:07:06,063 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:07:06,064 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:07:06,064 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:07:06,064 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:07:06,064 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:07:06,064 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:07:06,064 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 11:07:06,064 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:07:06,069 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:07:06,069 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:07:06,158 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:07:07,982 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:07:07,985 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:07:07,985 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 11:07:07,989 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 11:07:07,992 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 11:07:07,993 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 11:09:46,367 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:09:54,611 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:09:54,611 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:09:54,611 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:09:54,611 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:11:24,368 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:11:31,779 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:11:31,779 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:11:31,779 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:11:31,779 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:11:31,779 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 11:11:31,781 [MainThread  ] [INFO ]  	 Data shape: (1000, 101), X shape: (1000, 100), y shape: (1000,)
+2024-02-25 11:11:31,781 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:12:08,646 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:12:08,646 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:12:08,646 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:12:08,646 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:12:08,646 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 11:12:08,649 [MainThread  ] [INFO ]  	 Data shape: (1000, 101), X shape: (1000, 100), y shape: (1000,)
+2024-02-25 11:12:08,649 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:13:11,834 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:13:11,834 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:13:11,834 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:13:11,834 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:13:11,834 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 11:13:11,836 [MainThread  ] [INFO ]  	 Data shape: (1000, 101), X shape: (1000, 100), y shape: (1000,)
+2024-02-25 11:13:11,837 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:13:11,837 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:13:11,838 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:13:11,838 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:13:11,838 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:13:11,838 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 11:13:11,838 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:13:11,854 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:13:11,854 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 11:13:12,351 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 11:13:12,354 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 11:13:35,455 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:13:35,455 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:13:35,455 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:13:35,455 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:13:35,455 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 11:13:35,457 [MainThread  ] [INFO ]  	 Data shape: (1000, 101), X shape: (1000, 100), y shape: (1000,)
+2024-02-25 11:13:35,457 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:13:35,459 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:13:35,459 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:13:35,459 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:13:35,459 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:13:35,459 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 11:13:35,459 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:13:35,474 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:13:35,475 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 11:13:35,960 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 11:13:36,996 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 11:13:36,998 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 11:15:27,218 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:15:27,218 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:15:27,218 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:15:27,218 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:15:27,218 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:15:27,220 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:15:27,220 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:15:27,221 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:15:27,221 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:15:27,221 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:15:27,221 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:15:45,151 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:15:45,151 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:15:45,151 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:15:45,151 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:15:45,151 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:15:45,152 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:15:45,153 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:15:45,154 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:15:45,154 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:15:45,154 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:15:45,154 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:15:45,154 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:15:45,154 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:15:45,159 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:15:45,159 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:15:45,237 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:15:46,406 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:15:46,409 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:18:01,395 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:18:01,395 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:18:01,395 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:18:01,395 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:18:01,395 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:18:01,396 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:18:01,396 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:18:01,397 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:18:01,398 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:18:01,398 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:18:01,398 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:18:01,398 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:18:01,398 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:18:01,403 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:18:01,403 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:18:01,497 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:18:03,600 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:18:03,603 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:19:31,645 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:19:31,645 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:19:31,645 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:19:31,645 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:19:31,645 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:19:31,646 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:19:31,646 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:19:31,647 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:19:31,647 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:19:31,647 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:19:31,647 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:19:31,647 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:19:31,647 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:19:31,652 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:19:31,653 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:19:31,731 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:19:32,665 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:19:32,667 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:19:58,159 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:19:58,159 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:19:58,159 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:19:58,159 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:19:58,159 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:19:58,160 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:19:58,160 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:19:58,161 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:19:58,161 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:19:58,161 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:19:58,161 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:19:58,161 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:19:58,161 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:19:58,166 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:19:58,166 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:19:58,260 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:20:00,615 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:20:00,618 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:20:42,759 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:20:42,759 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:20:42,759 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:20:42,759 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:20:42,759 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:20:42,760 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:20:42,760 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:20:42,761 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:20:42,761 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:20:42,761 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:20:42,761 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:20:42,761 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:20:42,761 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:20:42,766 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:20:42,766 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:20:42,855 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:20:44,515 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:20:44,518 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:22:03,119 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:22:03,119 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:22:03,119 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:22:03,119 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:22:03,119 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:22:03,120 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:22:03,120 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:22:03,121 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:22:03,121 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:22:03,121 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:22:03,121 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:22:03,121 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:22:03,121 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:22:03,126 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:22:03,126 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:22:03,223 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:22:05,563 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:22:05,566 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:22:51,163 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:22:51,163 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:22:51,163 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:22:51,163 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:22:51,163 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:22:51,165 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:22:51,165 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:22:51,166 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:22:51,166 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:22:51,166 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:22:51,166 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:22:51,166 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:22:51,166 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:22:51,171 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:22:51,171 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:22:51,263 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:22:52,935 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:22:52,938 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:22:58,340 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:22:58,340 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:22:58,340 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:22:58,340 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:22:58,340 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:22:58,341 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:22:58,341 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:22:58,342 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:22:58,342 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:22:58,343 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:22:58,343 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:22:58,343 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:22:58,343 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:22:58,348 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:22:58,348 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:22:58,435 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:23:00,344 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:23:00,347 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:23:29,106 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:23:29,106 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:23:29,106 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:23:29,106 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:23:29,106 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:23:29,108 [MainThread  ] [INFO ]  	 Data shape: (1000, 21), X shape: (1000, 20), y shape: (1000,)
+2024-02-25 11:23:29,108 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:23:29,109 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:23:29,109 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:23:29,109 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:23:29,109 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:23:29,109 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:23:29,109 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:23:29,114 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:23:29,114 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:23:29,204 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:23:30,739 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:23:30,742 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:37:14,216 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:37:14,216 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:37:14,216 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:37:14,216 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:37:14,216 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:37:36,797 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:37:36,797 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:37:36,797 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:37:36,797 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:37:36,797 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:38:06,461 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:38:06,461 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:38:06,461 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:38:06,461 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:38:06,461 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:38:06,461 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:38:18,362 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:38:18,362 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:38:18,362 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:38:18,362 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:38:18,362 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:38:18,363 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:38:18,363 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:38:18,363 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:38:18,363 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:38:18,364 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:38:18,364 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:38:18,364 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:38:18,368 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:38:18,368 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:38:18,451 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:38:19,584 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:38:19,586 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:39:14,852 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:39:14,852 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:39:14,852 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:39:14,852 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:39:14,852 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:39:14,853 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:39:14,853 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:39:14,853 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:39:14,853 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:39:14,853 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:39:14,853 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:39:14,853 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:39:14,858 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:39:14,858 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:39:14,949 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:39:16,726 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:39:16,729 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:42:30,317 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:42:30,318 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:42:30,318 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:42:30,318 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:42:30,318 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:42:30,318 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:42:30,319 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:42:30,319 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:42:30,319 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:42:30,319 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:42:30,319 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:42:30,319 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:42:30,323 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:42:30,323 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:42:30,411 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:42:32,386 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:42:32,389 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:43:12,865 [MainThread  ] [INFO ]  Class object FeatureImportanceClassification instantiated successfully
+2024-02-25 11:43:12,865 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:43:12,865 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:43:12,865 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:43:12,865 [MainThread  ] [INFO ]  	 Generating data for classification with num-samples 1000
+2024-02-25 11:43:12,866 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:43:12,866 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:43:12,867 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:43:12,867 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:43:12,867 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:43:12,867 [MainThread  ] [INFO ]  		 Adding Estimator RandomForestClassifier
+2024-02-25 11:43:12,867 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:43:12,871 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:43:12,872 [MainThread  ] [INFO ]  	 Fitting Estimator RandomForestClassifier.
+2024-02-25 11:43:12,961 [MainThread  ] [INFO ]  	 Generating feature importance for RandomForestClassifier
+2024-02-25 11:43:14,529 [MainThread  ] [INFO ]  	 Generating Predictions for RandomForestClassifier.
+2024-02-25 11:43:14,532 [MainThread  ] [INFO ]  		 Predictions for RandomForestClassifier generated successfully.
+2024-02-25 11:43:34,973 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:43:34,973 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:43:34,973 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:43:34,973 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:43:34,973 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 11:43:34,975 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:43:34,975 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:43:34,975 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:43:34,976 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:43:34,976 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:43:34,976 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 11:43:34,976 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:43:34,991 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:43:34,991 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 11:43:35,470 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 11:43:36,497 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 11:43:36,499 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 11:43:48,636 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:43:48,636 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:43:48,636 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:43:48,636 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:43:48,636 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 11:43:48,638 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:43:48,638 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:43:48,638 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:43:48,638 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:43:48,639 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:43:48,639 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 11:43:48,639 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:43:48,654 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:43:48,654 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 11:43:49,128 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 11:43:50,149 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 11:43:50,151 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 11:44:00,034 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:44:00,034 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:44:00,034 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:44:00,034 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:44:00,034 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 11:44:00,036 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:44:00,036 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:44:00,037 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:44:00,037 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:44:00,037 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:44:00,037 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 11:44:00,037 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:44:00,052 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:44:00,052 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 11:44:00,524 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 11:44:01,547 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 11:44:01,549 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 11:48:04,158 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:48:04,158 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:48:04,158 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:48:04,158 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:48:04,158 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 11:48:04,160 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:48:04,160 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:48:04,161 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:48:04,161 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:48:04,161 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:48:04,161 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 11:48:04,161 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:48:04,176 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:48:04,176 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 11:48:04,659 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 11:48:05,685 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 11:48:05,687 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 11:48:05,687 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 11:48:24,395 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:48:24,395 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:48:24,395 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:48:24,395 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:48:24,395 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 11:48:24,397 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:48:24,397 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:48:24,397 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:48:24,397 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:48:24,397 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:48:24,397 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 11:48:24,397 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 11:48:24,397 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:48:24,418 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:48:24,418 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 11:48:24,890 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 11:48:25,896 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 11:48:25,898 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 11:48:25,898 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 11:48:25,914 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 11:48:25,918 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 11:48:25,941 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 11:48:25,941 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 11:54:34,216 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:54:34,216 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:54:34,216 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:54:34,216 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:54:34,216 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 11:54:34,218 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:54:34,218 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:54:34,218 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:54:34,218 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:54:34,218 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:54:34,218 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 11:54:34,218 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 11:54:34,218 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:54:34,233 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:54:34,233 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 11:54:34,720 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 11:54:35,738 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 11:54:35,740 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 11:54:35,740 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 11:54:35,755 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 11:54:35,759 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 11:54:35,783 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 11:54:35,783 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 11:54:35,783 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 11:54:49,951 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:54:49,951 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:54:49,951 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:54:49,951 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:54:49,951 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 11:54:49,953 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:54:49,953 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:54:49,953 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:54:49,953 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:54:49,953 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:54:49,954 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 11:54:49,954 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 11:54:49,954 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:54:49,969 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:54:49,969 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 11:54:50,439 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 11:54:51,463 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 11:54:51,465 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 11:54:51,465 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 11:54:51,481 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 11:54:51,485 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 11:54:51,514 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 11:54:51,514 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 11:54:51,514 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 11:56:15,630 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:56:15,630 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:56:15,630 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:56:15,630 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:56:15,630 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 11:56:15,632 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:56:15,632 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:56:15,632 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:56:15,633 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:56:15,633 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:56:15,633 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 11:56:15,633 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 11:56:15,633 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:56:15,654 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:56:15,654 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 11:56:16,138 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 11:56:17,167 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 11:56:17,169 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 11:56:17,169 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 11:56:17,184 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 11:56:17,188 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 11:56:17,232 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 11:56:17,232 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 11:56:17,232 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 11:56:32,695 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:56:32,695 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:56:32,695 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:56:32,695 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:56:32,695 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 11:56:32,697 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:56:32,697 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:56:32,697 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:56:32,697 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:56:32,697 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:56:32,697 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 11:56:32,697 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 11:56:32,697 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:56:32,712 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:56:32,712 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 11:56:33,189 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 11:56:34,216 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 11:56:34,218 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 11:56:34,218 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 11:56:34,233 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 11:56:34,237 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 11:56:34,260 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 11:56:34,260 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 11:56:34,261 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 11:57:00,647 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 11:57:00,647 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 11:57:00,647 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 11:57:00,647 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 11:57:00,647 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 11:57:00,649 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 11:57:00,650 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 11:57:00,650 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 11:57:00,650 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 11:57:00,650 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 11:57:00,650 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 11:57:00,650 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 11:57:00,650 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 11:57:00,665 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 11:57:00,665 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 11:57:01,145 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 11:57:02,162 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 11:57:02,163 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 11:57:02,163 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 11:57:02,180 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 11:57:02,184 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 11:57:02,206 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 11:57:02,206 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 12:02:51,867 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 12:02:51,867 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 12:02:51,867 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 12:02:51,868 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 12:02:51,868 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 12:02:51,869 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 12:02:51,870 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 12:02:51,870 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 12:02:51,870 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 12:02:51,870 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 12:02:51,870 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 12:02:51,870 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 12:02:51,870 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 12:02:51,891 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 12:02:51,891 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 12:02:52,380 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 12:02:53,396 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 12:02:53,398 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 12:02:53,398 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 12:02:53,413 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 12:02:53,418 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 12:02:53,446 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 12:02:53,446 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 12:03:29,837 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 12:03:29,837 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 12:03:29,837 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 12:03:29,837 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 12:03:29,837 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 12:03:29,839 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 12:03:29,840 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 12:03:29,840 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 12:03:29,840 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 12:03:29,840 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 12:03:29,840 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 12:03:29,840 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 12:03:29,840 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 12:03:29,855 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 12:03:29,855 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 12:03:30,342 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 12:03:31,396 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 12:03:31,398 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 12:03:31,399 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 12:03:31,417 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 12:03:31,425 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 12:03:31,438 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 12:03:31,438 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 12:03:38,191 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 12:03:38,191 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 12:03:38,191 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 12:03:38,191 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 12:03:38,191 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 12:03:38,192 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 12:03:38,193 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 12:03:38,193 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 12:03:38,193 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 12:03:38,193 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 12:03:38,193 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 12:03:38,193 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 12:03:38,193 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 12:03:38,208 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 12:03:38,208 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 12:03:38,690 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 12:03:39,715 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 12:03:39,717 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 12:03:39,717 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 12:03:39,733 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 12:03:39,737 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 12:03:39,760 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 12:03:39,760 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 12:04:12,814 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 12:04:12,814 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 12:04:12,814 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 12:04:12,814 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 12:04:12,814 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 12:04:12,816 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 12:04:12,816 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 12:04:12,816 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 12:04:12,816 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 12:04:12,816 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 12:04:12,816 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 12:04:12,816 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 12:04:12,816 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 12:04:12,837 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 12:04:12,837 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 12:04:13,316 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 12:04:14,348 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 12:04:14,350 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 12:04:14,350 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 12:04:14,366 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 12:04:14,370 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 12:04:14,393 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 12:04:14,393 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 12:05:32,529 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 12:05:32,529 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 12:05:32,529 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 12:05:32,529 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 12:05:32,529 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 12:05:32,531 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 12:05:32,531 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 12:05:32,531 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 12:05:32,531 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 12:05:32,531 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 12:05:32,531 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 12:05:32,531 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 12:05:32,531 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 12:05:32,546 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 12:05:32,546 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 12:05:33,028 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 12:05:34,045 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 12:05:34,047 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 12:05:34,047 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 12:05:34,062 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 12:05:34,066 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 12:05:34,089 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 12:05:34,090 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 12:05:34,090 [MainThread  ] [INFO ]  Median value for LGBMRegressor is 0.35454089563232516
+2024-02-25 12:05:34,090 [MainThread  ] [INFO ]  Median value for LinearRegression is 2.1847538771465277e-14
+2024-02-25 12:08:37,110 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 12:08:37,110 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 12:08:37,110 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 12:08:37,110 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 12:08:37,110 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 12:08:37,122 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 12:08:37,122 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 12:08:37,122 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 12:08:37,122 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 12:08:37,122 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 12:08:37,122 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 12:08:37,122 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 12:08:37,123 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 12:08:37,138 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 12:08:37,138 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 12:08:37,625 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 12:08:38,646 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 12:08:38,648 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 12:08:38,648 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 12:08:38,663 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 12:08:38,667 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 12:08:38,691 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 12:08:38,691 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 12:08:38,703 [MainThread  ] [INFO ]  Median value for LGBMRegressor is 0.2222046906200557
+2024-02-25 12:08:38,704 [MainThread  ] [INFO ]  Median value for LinearRegression is 1.6308539246986436e-14
+2024-02-25 12:09:01,225 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 12:09:01,225 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 12:09:01,225 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 12:09:01,225 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 12:09:01,225 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 12:09:01,227 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 12:09:01,227 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 12:09:01,227 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 12:09:01,227 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 12:09:01,228 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 12:09:01,228 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 12:09:01,228 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 12:09:01,228 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 12:09:01,243 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 12:09:01,243 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 12:09:01,727 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 12:09:02,753 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 12:09:02,755 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 12:09:02,755 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 12:09:02,770 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 12:09:02,773 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 12:09:02,800 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 12:09:02,800 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 12:09:02,801 [MainThread  ] [INFO ]  Median value for LGBMRegressor is 0.28365747256887097
+2024-02-25 12:09:02,801 [MainThread  ] [INFO ]  Median value for LinearRegression is 1.8561276267886598e-14
+2024-02-25 12:10:36,447 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 12:10:36,447 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 12:10:36,447 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 12:10:36,447 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 12:10:36,447 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 12:10:36,449 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 12:10:36,449 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 12:10:36,449 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 12:10:36,449 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 12:10:36,449 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 12:10:36,449 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 12:10:36,449 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 12:10:36,450 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 12:10:36,470 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 12:10:36,470 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 12:10:36,950 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 12:10:37,987 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 12:10:37,989 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 12:10:37,989 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 12:10:38,005 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 12:10:38,009 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 12:10:38,042 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 12:10:38,042 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 12:10:38,042 [MainThread  ] [INFO ]  Median value for LGBMRegressor is 0.5650160227064287
+2024-02-25 12:10:38,042 [MainThread  ] [INFO ]  Median value for LinearRegression is 2.9786173100463146e-14
+2024-02-25 12:10:45,239 [MainThread  ] [INFO ]  Class object FeatureImportanceRegression instantiated successfully
+2024-02-25 12:10:45,239 [MainThread  ] [INFO ]  Fitting and transforming the model.
+2024-02-25 12:10:45,239 [MainThread  ] [INFO ]  Fitting the model.
+2024-02-25 12:10:45,239 [MainThread  ] [INFO ]  Generate synthetic data elected
+2024-02-25 12:10:45,239 [MainThread  ] [INFO ]  	 Generating data for regression with num-samples 1000
+2024-02-25 12:10:45,241 [MainThread  ] [INFO ]  Generating the train test split.
+2024-02-25 12:10:45,241 [MainThread  ] [INFO ]  Building the categorical transformer.
+2024-02-25 12:10:45,242 [MainThread  ] [INFO ]  Building the numeric transformer.
+2024-02-25 12:10:45,242 [MainThread  ] [INFO ]  Building the column transformer.
+2024-02-25 12:10:45,242 [MainThread  ] [INFO ]  Building estimator pipelines.
+2024-02-25 12:10:45,242 [MainThread  ] [INFO ]  		 Adding Estimator LGBMRegressor
+2024-02-25 12:10:45,242 [MainThread  ] [INFO ]  		 Adding Estimator LinearRegression
+2024-02-25 12:10:45,243 [MainThread  ] [INFO ]  Transforming the data.
+2024-02-25 12:10:45,257 [MainThread  ] [INFO ]  Building Estimators.
+2024-02-25 12:10:45,257 [MainThread  ] [INFO ]  	 Fitting Estimator LGBMRegressor.
+2024-02-25 12:10:45,735 [MainThread  ] [INFO ]  	 Generating feature importance for LGBMRegressor
+2024-02-25 12:10:46,771 [MainThread  ] [INFO ]  	 Generating Predictions for LGBMRegressor.
+2024-02-25 12:10:46,773 [MainThread  ] [INFO ]  		 Predictions for LGBMRegressor generated successfully.
+2024-02-25 12:10:46,773 [MainThread  ] [INFO ]  	 Fitting Estimator LinearRegression.
+2024-02-25 12:10:46,788 [MainThread  ] [INFO ]  	 Generating feature importance for LinearRegression
+2024-02-25 12:10:46,792 [MainThread  ] [INFO ]  	 Generating Predictions for LinearRegression.
+2024-02-25 12:10:46,816 [MainThread  ] [INFO ]  		 Predictions for LinearRegression generated successfully.
+2024-02-25 12:10:46,816 [MainThread  ] [INFO ]  Joining feature importance data.
+2024-02-25 12:10:46,817 [MainThread  ] [INFO ]  Median value for LGBMRegressor is 0.4232515272695836
+2024-02-25 12:10:46,817 [MainThread  ] [INFO ]  Median value for LinearRegression is 1.6935655424911247e-14
