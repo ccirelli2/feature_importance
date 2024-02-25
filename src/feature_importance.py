@@ -4,20 +4,14 @@ Class object to measure feature important using majority voting across n-estimat
 import os
 import logging
 import git
-from uuid import uuid4
 import pandas as pd
 import numpy as np
 from typing import Dict, Union, List
 from collections import Counter
-from sklearn.preprocessing import StandardScaler
-from sklearn.impute import SimpleImputer
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
-from sklearn.model_selection import train_test_split
-from category_encoders.count import CountEncoder
 from sklearn.base import BaseEstimator, ClassifierMixin, RegressorMixin
+
+# Feature Importance
 import shap
-from shap import KernelExplainer, summary_plot
 
 # Data
 from sklearn.datasets import make_classification, make_regression
@@ -26,16 +20,9 @@ from sklearn.datasets import make_classification, make_regression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
-
-# Modeling
-from lightgbm import LGBMClassifier, LGBMRegressor
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LinearRegression
-
-# Project
-from src import utils
-
-# Directories
+from sklearn.compose import ColumnTransformer
+from sklearn.model_selection import train_test_split
+from category_encoders.count import CountEncoder
 
 # Use the git library to find the root directory of the project.  return a string value.
 DIR_ROOT = git.Repo(".", search_parent_directories=True).working_tree_dir
@@ -43,9 +30,9 @@ DIR_DATA = os.path.join(DIR_ROOT, "data")
 DIR_DATA_EXAMPLES = os.path.join(DIR_DATA, "examples")
 
 # Settings
-logger = utils.Logger(
-    directory=DIR_DATA_EXAMPLES, filename="example-majority-vote"
-).get_logger()
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 
 class FeatureImportanceBaseClass:
@@ -107,7 +94,6 @@ class FeatureImportanceBaseClass:
             tuple[str, Union[BaseEstimator, ClassifierMixin, RegressorMixin]]
         ] = (),
     ):
-        self.objective = objective
         self.data = data
         self.target_column = target_column
         self.test_size = test_size
@@ -129,8 +115,6 @@ class FeatureImportanceBaseClass:
         self.X_test = pd.DataFrame({})
         self.y_train = pd.DataFrame({})
         self.y_test = pd.DataFrame({})
-        msg = "objective must be classification or regression"
-        assert self.objective in ("classification", "regression"), msg
         msg = "number of estimators must be between 2 and 10"
         assert all([len(self.estimators) >= 2, len(self.estimators) <= 10]), msg
         logger.info(f"Class object {self.__class__.__name__} instantiated successfully")
@@ -262,7 +246,14 @@ class FeatureImportanceBaseClass:
 
 
 class FeatureImportanceClassification(FeatureImportanceBaseClass):
-    # TODO: Add classification metrics
+    """
+    Inherited methods from FeatureImportanceBaseClass:
+    - _generate_data(self)
+    - _generate_train_test_split(self)
+    - _calculate_importance(self, importance_df)
+    - _total_votes(self, importance_df)
+    """
+
     def __init(self):
         self.objective = "classification"
         super().__init__()
@@ -332,7 +323,7 @@ class FeatureImportanceClassification(FeatureImportanceBaseClass):
                 mean_abs_importance = mean_abs_importance.mean(axis=1)
         # Plot
         if self.plot_importance:
-            summary_plot(shap_values, self.X_test)
+            shap.summary_plot(shap_values, self.X_test)
         # Create the DataFrame
         importance_df = pd.DataFrame(
             {
@@ -391,6 +382,13 @@ class FeatureImportanceRegression(FeatureImportanceBaseClass):
     """
     We need to separate the feature importance for classification and regression models because the
     evaluation metrics and feature importance will be different.
+
+    Inherited methods from FeatureImportanceBaseClass:
+        - _generate_data(self)
+        - _generate_train_test_split(self)
+        - _calculate_importance(self, importance_df)
+        - _total_votes(self, importance_df)
+
     """
 
     # TODO: Add regression metrics
@@ -507,34 +505,3 @@ class FeatureImportanceRegression(FeatureImportanceBaseClass):
         self.fit()
         self.transform()
         return self
-
-
-if __name__ == "__main__":
-    # Classification Implementation
-    f_imp_clf = FeatureImportanceClassification(
-        num_samples_synthetic=1000,
-        plot_importance=False,
-        generate_synthetic_data=True,
-        estimators=(
-            ("RandomForestClassifier", RandomForestClassifier()),
-            ("LGBMClassifier", LGBMClassifier()),
-        ),
-    )
-
-    f_imp_clf.fit_transform()
-
-    # Regression Implementation
-    f_imp_reg = FeatureImportanceRegression(
-        num_samples_synthetic=1000,
-        plot_importance=False,
-        generate_synthetic_data=True,
-        objective="regression",
-        estimators=(
-            ("LGBMRegressor", LGBMRegressor()),
-            ("LinearRegression", LinearRegression()),
-        ),
-    )
-    f_imp_reg.fit_transform()
-
-    print(f_imp_clf.feature_importance_df, "\n")
-    print(f_imp_reg.feature_importance_df)
