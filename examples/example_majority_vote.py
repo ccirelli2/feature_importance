@@ -8,6 +8,7 @@ from uuid import uuid4
 import pandas as pd
 import numpy as np
 from typing import Dict, Union, List
+from collections import Counter
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
@@ -140,6 +141,9 @@ class BaseClass:
                 self.X, self.y = make_classification(
                     n_samples=self.num_samples_synthetic
                 )
+                logger.info(
+                    f"\t Data shape: {self.X.shape}, Target shape: {self.y.shape}, Labels {Counter(self.y)}"
+                )
 
             else:
                 logger.info(
@@ -267,10 +271,14 @@ class BaseClass:
         # Calculate average SHAP values (absolute or mean, choose based on your preference)
         shap_abs = np.abs(shap_values)  # Calculate absolute values
         mean_abs_importance = shap_abs.mean(axis=0)
-        if self.objective == "classification":
-            # shap returns feature importance by class label.  mean abs results in the same value per clas.
-            # here we are just taking the average across rows [[1, 1,]], which will return the same value of one row.
-            mean_abs_importance = mean_abs_importance.mean(axis=1)
+        # Check if Classification and the shape of the mean_abs_importance is 2D
+        if all(
+            [self.objective == "classification", len(mean_abs_importance.shape) != 1]
+        ):
+            # Check if second dimension is > 2 meaning we have multiple classes
+            if mean_abs_importance.shape[1] >= 2:
+                # If two dimensions shap is returning values per class.  we take mean as both values are the same.
+                mean_abs_importance = mean_abs_importance.mean(axis=1)
 
         # Plot
         if self.plot_importance:
@@ -339,6 +347,7 @@ class BaseClass:
         """
         Calculate total significance votes.
         """
+        logger.info("Calculating total votes.")
         significance_columns = [
             c for c in self.feature_importance_df.columns if "IS_SIGNIFICANT" in c
         ]
@@ -352,6 +361,7 @@ class BaseClass:
         Function to create a majority vote column.
         If N-1 models agree a feature is important then 1 else 0.
         """
+        logger.info("Calculating majority vote.")
         self.feature_importance_df["IS_MAJORITY"] = list(
             map(
                 lambda x: 1
@@ -371,7 +381,6 @@ class BaseClass:
         self._build_numeric_column_transformer()
         self._build_final_column_transformer()
         self._build_estimator_pipelines()
-        self._total_votes()
         return self
 
     def transform(self):
@@ -393,7 +402,9 @@ class BaseClass:
 
 
 class FeatureImportanceClassification(BaseClass):
+    # TODO: Add classification metrics
     def __init(self):
+        self.objective = "classification"
         super().__init__()
 
 
@@ -403,16 +414,18 @@ class FeatureImportanceRegression(BaseClass):
     evaluation metrics and feature importance will be different.
     """
 
+    # TODO: Add regression metrics
     def __init(self):
+        self.objective = "regression"
         super().__init__()
 
 
 if __name__ == "__main__":
+    # Classification Implementation
     f_imp_clf = FeatureImportanceClassification(
         num_samples_synthetic=1000,
         plot_importance=False,
         generate_synthetic_data=True,
-        objective="classification",
         estimators=(
             ("RandomForestClassifier", RandomForestClassifier()),
             ("LGBMClassifier", LGBMClassifier()),
@@ -421,6 +434,7 @@ if __name__ == "__main__":
 
     f_imp_clf.fit_transform()
 
+    # Regression Implementation
     f_imp_reg = FeatureImportanceRegression(
         num_samples_synthetic=1000,
         plot_importance=False,
@@ -432,3 +446,6 @@ if __name__ == "__main__":
         ),
     )
     f_imp_reg.fit_transform()
+
+    print(f_imp_clf.feature_importance_df, "\n")
+    print(f_imp_reg.feature_importance_df)

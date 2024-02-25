@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b6d1afa-a118-4f4a-b7aa-277a13988d94" name="Changes" comment="setup">
+    <list default="true" id="8b6d1afa-a118-4f4a-b7aa-277a13988d94" name="Changes" comment="building base class for majority vote feature importance">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/examples/example-majority-vote.logs" beforeDir="false" afterPath="$PROJECT_DIR$/data/examples/example-majority-vote.logs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/example_majority_vote.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_majority_vote.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,70 +218,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698492992954</updated>
-    </task>
-    <task id="LOCAL-00007" summary="misc.">
-      <option name="closed" value="true" />
-      <created>1698800179954</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1698800179954</updated>
-    </task>
-    <task id="LOCAL-00008" summary="misc.">
-      <option name="closed" value="true" />
-      <created>1698881478080</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1698881478080</updated>
-    </task>
-    <task id="LOCAL-00009" summary="misc.">
-      <option name="closed" value="true" />
-      <created>1698881519058</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1698881519058</updated>
-    </task>
-    <task id="LOCAL-00010" summary="misc.">
-      <option name="closed" value="true" />
-      <created>1698954295184</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1698954295184</updated>
-    </task>
-    <task id="LOCAL-00011" summary="misc.">
-      <option name="closed" value="true" />
-      <created>1698956262534</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1698956262534</updated>
-    </task>
-    <task id="LOCAL-00012" summary="misc.">
-      <option name="closed" value="true" />
-      <created>1698956539068</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1698956539068</updated>
-    </task>
-    <task id="LOCAL-00013" summary="misc.">
-      <option name="closed" value="true" />
-      <created>1699193599029</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1699193599029</updated>
-    </task>
-    <task id="LOCAL-00014" summary="misc.">
-      <option name="closed" value="true" />
-      <created>1699193981112</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1699193981112</updated>
     </task>
     <task id="LOCAL-00015" summary="misc.">
       <option name="closed" value="true" />
@@ -613,7 +547,71 @@
       <option name="project" value="LOCAL" />
       <updated>1708381173088</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="building base class for majority vote feature importance">
+      <option name="closed" value="true" />
+      <created>1708475738503</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1708475738504</updated>
+    </task>
+    <task id="LOCAL-00057" summary="building base class for majority vote feature importance">
+      <option name="closed" value="true" />
+      <created>1708476298869</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1708476298869</updated>
+    </task>
+    <task id="LOCAL-00058" summary="building base class for majority vote feature importance">
+      <option name="closed" value="true" />
+      <created>1708476348881</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1708476348881</updated>
+    </task>
+    <task id="LOCAL-00059" summary="building base class for majority vote feature importance">
+      <option name="closed" value="true" />
+      <created>1708476419240</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1708476419240</updated>
+    </task>
+    <task id="LOCAL-00060" summary="building base class for majority vote feature importance">
+      <option name="closed" value="true" />
+      <created>1708479440783</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1708479440783</updated>
+    </task>
+    <task id="LOCAL-00061" summary="building base class for majority vote feature importance">
+      <option name="closed" value="true" />
+      <created>1708871484213</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1708871484213</updated>
+    </task>
+    <task id="LOCAL-00062" summary="building base class for majority vote feature importance">
+      <option name="closed" value="true" />
+      <created>1708881059353</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1708881059353</updated>
+    </task>
+    <task id="LOCAL-00063" summary="building base class for majority vote feature importance">
+      <option name="closed" value="true" />
+      <created>1708881175818</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1708881175818</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -647,6 +645,7 @@
     <MESSAGE value="Update importance code" />
     <MESSAGE value="added final ml dataset transform + lightgbm script." />
     <MESSAGE value="setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup" />
+    <MESSAGE value="building base class for majority vote feature importance" />
+    <option name="LAST_COMMIT_MESSAGE" value="building base class for majority vote feature importance" />
   </component>
 </project>
