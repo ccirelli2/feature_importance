@@ -32,7 +32,6 @@ if __name__ == "__main__":
         num_samples_synthetic=1000,
         plot_importance=False,
         generate_synthetic_data=True,
-        objective="regression",
         estimators=(
             ("LGBMRegressor", LGBMRegressor()),
             ("LinearRegression", LinearRegression()),

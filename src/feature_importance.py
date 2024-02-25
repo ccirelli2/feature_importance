@@ -1,5 +1,6 @@
 """
 Class object to measure feature important using majority voting across n-estimators.
+
 """
 import os
 import logging
@@ -81,21 +82,21 @@ class FeatureImportanceBaseClass:
 
     def __init__(
         self,
-        objective: str = "classification",
-        data: pd.DataFrame = pd.DataFrame(),
-        target_column: str = "TARGET",
+        data: pd.DataFrame = pd.DataFrame({}),
+        target_column: str = "",
+        generate_synthetic_data: bool = False,
         plot_importance: bool = False,
         test_size: float = 0.33,
         numeric_features: list = [],
         categorical_features: list = [],
-        generate_synthetic_data: bool = False,
         num_samples_synthetic: int = 10_000,
         estimators: List[
             tuple[str, Union[BaseEstimator, ClassifierMixin, RegressorMixin]]
         ] = (),
     ):
         self.data = data
-        self.target_column = target_column
+        self.target_column = target_column if target_column else "TARGET"
+        self.plot_importance = plot_importance
         self.test_size = test_size
         self.numeric_features = numeric_features
         self.feature_set: list = []
@@ -110,13 +111,17 @@ class FeatureImportanceBaseClass:
         self.estimator_predictions: Dict[str, np.ndarray] = {}
         self.estimator_feature_importance: Dict[str, pd.DataFrame] = {}
         self.feature_importance_df = pd.DataFrame()
-        self.plot_importance = plot_importance
+        self.feature_importance_majority_vote: Dict[str, pd.DataFrame] = {}
         self.X_train = pd.DataFrame({})
         self.X_test = pd.DataFrame({})
         self.y_train = pd.DataFrame({})
         self.y_test = pd.DataFrame({})
         msg = "number of estimators must be between 2 and 10"
         assert all([len(self.estimators) >= 2, len(self.estimators) <= 10]), msg
+        if self.data.empty:
+            assert (
+                self.generate_synthetic_data
+            ), "If data is not passed generate-synthetic-data must be true"
         logger.info(f"Class object {self.__class__.__name__} instantiated successfully")
 
     def _build_categorical_column_transformer(self):
@@ -265,6 +270,7 @@ class FeatureImportanceClassification(FeatureImportanceBaseClass):
                 "Generate synthetic data with num-samples {self.num_samples_synthetic}"
             )
             self.X, self.y = make_classification(n_samples=self.num_samples_synthetic)
+            self.num_labels = len(Counter(self.y))
             logger.info(
                 f"\t Generated Data shape: {self.X.shape}, Target shape: {self.y.shape}, Labels {Counter(self.y)}"
             )
@@ -313,6 +319,14 @@ class FeatureImportanceClassification(FeatureImportanceBaseClass):
         logger.info(f"\t Generating feature importance for {name}")
         # Access the final estimator from the pipeline
         estimator = pipeline.named_steps["estimator"]
+        # Plot
+        if self.plot_importance:
+            explainer = shap.Explainer(estimator)
+            shap_values = explainer(self.X_train)
+            for i in range(self.num_labels):
+                logger.info(f"Feature Importance Class => {i}")
+                shap.plots.waterfall(shap_values[0, :, i])
+
         # Create an Explainer for the estimator and obtain shap values
         explainer = shap.Explainer(estimator, self.X_train)
         shap_values = explainer(self.X_test).values
@@ -326,33 +340,30 @@ class FeatureImportanceClassification(FeatureImportanceBaseClass):
             if mean_abs_importance.shape[1] >= 2:
                 # If two dimensions shap is returning values per class.  we take mean as both values are the same.
                 mean_abs_importance = mean_abs_importance.mean(axis=1)
-        # Plot
-        if self.plot_importance:
-            shap.summary_plot(shap_values, self.X_test)
+
         # Create the DataFrame
-        importance_df = pd.DataFrame(
+        feature_imp_df = pd.DataFrame(
             {
                 f"{name}_IMPORTANCE": mean_abs_importance,
             },
             index=self.feature_set,
         )
-        return importance_df
+        return feature_imp_df
 
     def _build(self):
         assert self.estimators, "No estimators found."
         logger.info("Building Estimators.")
         for name, pipeline in self.estimator_pipelines.items():
-            # Fit Estimator
             logger.info(f"\t Fitting Estimator {name}.")
             pipeline.fit(self.X_train, self.y_train)
-            # # Generate Feature Importance
             self.estimator_feature_importance[name] = self._generate_feature_importance(
                 pipeline, name
             )
-            # Generate Predictions
-            logger.info(f"\t Generating Predictions for {name}.")
             self.estimator_predictions[name] = pipeline.predict(self.X_test)
-            logger.info(f"\t\t Predictions for {name} generated successfully.")
+            self._join_feature_importance()
+            self._calculate_importance()
+            self._total_votes()
+            self._majority_vote()
         return self
 
     def fit(self):
@@ -370,17 +381,13 @@ class FeatureImportanceClassification(FeatureImportanceBaseClass):
         self.X_train = self.column_transformer.fit_transform(self.X_train)
         self.X_test = self.column_transformer.transform(self.X_test)
         self._build()
-        self._join_feature_importance()
-        self._calculate_importance()
-        self._total_votes()
-        self._majority_vote()
-        return self
+        return self.feature_importance_df
 
     def fit_transform(self):
         logger.info("Fitting and transforming the model.")
         self.fit()
         self.transform()
-        return self
+        return self.feature_importance_df
 
 
 class FeatureImportanceRegression(FeatureImportanceBaseClass):
@@ -471,17 +478,16 @@ class FeatureImportanceRegression(FeatureImportanceBaseClass):
         assert self.estimators, "No estimators found."
         logger.info("Building Estimators & Generating Feature Importance")
         for name, pipeline in self.estimator_pipelines.items():
-            # Fit Estimator
             logger.info(f"\t Fitting Estimator {name}.")
             pipeline.fit(self.X_train, self.y_train)
-            # # Generate Feature Importance
             self.estimator_feature_importance[name] = self._generate_feature_importance(
                 pipeline, name
             )
-            # Generate Predictions
-            logger.info(f"\t Generating Predictions for {name}.")
             self.estimator_predictions[name] = pipeline.predict(self.X_test)
-            logger.info(f"\t\t Predictions for {name} generated successfully.")
+            self._join_feature_importance()
+            self._calculate_importance()
+            self._total_votes()
+            self._majority_vote()
         return self
 
     def fit(self):
@@ -499,14 +505,10 @@ class FeatureImportanceRegression(FeatureImportanceBaseClass):
         self.X_train = self.column_transformer.fit_transform(self.X_train)
         self.X_test = self.column_transformer.transform(self.X_test)
         self._build()
-        self._join_feature_importance()
-        self._calculate_importance()
-        self._total_votes()
-        self._majority_vote()
-        return self
+        return self.feature_importance_df
 
     def fit_transform(self):
         logger.info("Fitting and transforming the model.")
         self.fit()
         self.transform()
-        return self
+        return self.feature_importance_df
