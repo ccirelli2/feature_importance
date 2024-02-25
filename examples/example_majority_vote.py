@@ -16,6 +16,8 @@ from sklearn.model_selection import train_test_split
 from category_encoders.count import CountEncoder
 from sklearn.base import BaseEstimator
 
+from abc import ABC, abstractmethod
+
 # Data
 from sklearn.datasets import make_classification, make_regression
 
@@ -44,7 +46,7 @@ logger = utils.Logger(
 ).get_logger()
 
 
-class BaseClass:
+class BaseClass(ABC):
     """
     Base class for building and evaluating machine learning models.
 
@@ -83,8 +85,10 @@ class BaseClass:
 
     Raises:
         AssertionError: If the objective is not 'classification' or 'regression'.
+        NotImplementedError: If the class is instantiated directly.
     """
 
+    @abstractmethod
     def __init__(
         self,
         objective: str = "classification",
@@ -166,7 +170,7 @@ class BaseClass:
         )
         return self
 
-    def _build_categorical_transformer(self):
+    def build_categorical_column_transformer(self):
         logger.info("Building the categorical transformer.")
         cat_features = [self.feature_set.index(f) for f in self.categorical_features]
         self.categorical_transformer = Pipeline(
@@ -179,7 +183,7 @@ class BaseClass:
         )
         return self
 
-    def _build_numeric_transformer(self):
+    def _build_numeric_column_transformer(self):
         logger.info("Building the numeric transformer.")
         self.numeric_transformer = Pipeline(
             steps=[
@@ -189,7 +193,7 @@ class BaseClass:
         )
         return self
 
-    def _build_column_transformer(self):
+    def _build_final_column_transformer(self):
         logger.info("Building the column transformer.")
         self.column_transformer = ColumnTransformer(
             transformers=[
@@ -212,9 +216,9 @@ class BaseClass:
         logger.info("Building estimator pipelines.")
         for name, estimator in self.estimators:
             conditions = [
-                hasattr(RandomForestClassifier, "predict"),
-                hasattr(RandomForestClassifier, "predict_proba"),
-                hasattr(RandomForestClassifier, "fit"),
+                hasattr(estimator, "predict"),
+                hasattr(estimator, "predict_proba"),
+                hasattr(estimator, "fit"),
             ]
             if not all(conditions):
                 logger.warn(
@@ -244,9 +248,9 @@ class BaseClass:
         logger.info("Fitting the model.")
         self._generate_data()
         self._generate_train_test_split()
-        self._build_categorical_transformer()
-        self._build_numeric_transformer()
-        self._build_column_transformer()
+        self.build_categorical_column_transformer()
+        self._build_numeric_column_transformer()
+        self._build_final_column_transformer()
         self._build_estimator_pipelines()
         return self
 
@@ -264,17 +268,17 @@ class BaseClass:
         return self
 
 
+class FeatureImportanceClassification:
+    def __init(self):
+        pass
+
+
 class FeatureImportanceRegression:
     """
     We need to separate the feature importance for classification and regression models because the
     evaluation metrics and feature importance will be different.
     """
 
-    def __init(self):
-        pass
-
-
-class FeatureImportanceClassification:
     def __init(self):
         pass
 
