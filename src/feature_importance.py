@@ -1,9 +1,8 @@
 """
 Class object to measure feature important using majority voting across n-estimators.
 
-TODO: Need to test code on real data.  It is not clear yet that the code works with real data where the transform
-    pipline needs to be called.  Right now we are calling the estimator from the pipeline on X-train when X-train has not
-    been transformed.  The fit method should occur beforehand.
+TODO: Maybe get rid of the synthetic data generation all together.
+    This will make the code much cleaner.
 
 """
 import os
@@ -125,9 +124,7 @@ class DataGenerator:
             logger.info("Splitting the data into X & y.")
             self.y = self.data[self.target_column]
             self.X = self.data.drop(self.target_column, axis=1)
-            self.feature_set = (
-                self.X.columns.tolist() if not self.feature_set else self.feature_set
-            )
+
         conditions = [
             [f for f in self.numeric_features if f in self.feature_set],
             [f for f in self.categorical_features if f in self.feature_set],
@@ -496,7 +493,7 @@ class FeatureImportanceBaseClass:
 
     def __init__(
         self,
-        objective: str,
+        objective: str = "classification",
         data: pd.DataFrame = pd.DataFrame({}),
         target_column: str = "",
         generate_synthetic_data: bool = False,
@@ -594,6 +591,7 @@ class FeatureImportanceClassification(FeatureImportanceBaseClass):
     ):
         super().__init__(
             objective="classification",
+            estimators=estimators,
             data=data,
             target_column=target_column,
             generate_synthetic_data=generate_synthetic_data,
@@ -603,7 +601,6 @@ class FeatureImportanceClassification(FeatureImportanceBaseClass):
             numeric_features=numeric_features,
             categorical_features=categorical_features,
             num_samples_synthetic=num_samples_synthetic,
-            estimators=estimators,
         )
         logger.info(f"Class object {self.__class__.__name__} instantiated successfully")
 
