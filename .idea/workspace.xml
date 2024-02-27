@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8b6d1afa-a118-4f4a-b7aa-277a13988d94" name="Changes" comment="...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example_feature_imp_classification_user_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_feature_imp_classification_user_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/feature_importance.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature_importance.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,23 +56,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Python.example_feature_imp_classification_user_data.executor": "Run",
-    "Python.example_majority_vote.executor": "Run",
-    "Python.feature_importance.executor": "Run",
-    "Python.generate_synthetic_data.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "dev-feature-imp-classes",
-    "last_opened_file_path": "/Users/temp-admin/repositories/feature_importance/examples",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Python.example_feature_imp_classification_user_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.example_majority_vote.executor&quot;: &quot;Run&quot;,
+    &quot;Python.feature_importance.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generate_synthetic_data.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev-feature-imp-classes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/temp-admin/repositories/feature_importance/examples&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/examples" />
@@ -226,14 +225,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698492992954</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Adding tests.">
-      <option name="closed" value="true" />
-      <created>1699803576023</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1699803576023</updated>
     </task>
     <task id="LOCAL-00026" summary="Adding tests.">
       <option name="closed" value="true" />
@@ -619,7 +610,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709030692175</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="...">
+      <option name="closed" value="true" />
+      <created>1709033320269</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1709033320269</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
