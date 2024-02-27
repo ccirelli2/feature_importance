@@ -23,7 +23,7 @@ numeric_features = [col for col in feature_set if col not in categorical_feature
 
 # Instantiate our class object
 fp = FeatureImportanceClassification(
-    generate_synthetic_data=True,
+    generate_synthetic_data=False,
     data=df,
     target_column="y",
     feature_set=feature_set,
