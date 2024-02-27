@@ -510,6 +510,11 @@ class FeatureImportanceBaseClass:
             tuple[str, Union[BaseEstimator, ClassifierMixin, RegressorMixin]]
         ] = (),
     ) -> None:
+        # Methods
+        self.data_generator = None
+        self.data_transformer_pipeline_builder = None
+        self.estimator_pipeline_builder = None
+        self.feature_importance_generator = None
         # Attributes
         self.objective = objective
         self.data = data
