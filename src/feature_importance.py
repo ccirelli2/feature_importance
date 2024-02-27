@@ -38,7 +38,47 @@ logger.setLevel(logging.DEBUG)
 
 class DataGenerator:
     """
-    Base class for handling data.
+    This DataGenerator class provides a framework for handling data preparation tasks in a machine learning pipeline.
+    It allows users to specify various options like synthetic data generation, feature selection, and test-train split
+    ratio, making it adaptable to different scenarios.
+
+    Attributes:
+    ===========
+    The class has several attributes that store information about the data and its manipulation:
+
+    data (pd.DataFrame): Holds the main data as a Pandas DataFrame.
+    objective (str): Specifies the objective of the machine learning task, either "classification" or "regression".
+    target_column (str): Name of the target column in the data.
+    feature_set (list): List of all feature names used in the analysis.
+    numeric_features (list): Subset of features classified as numerical.
+    categorical_features (list): Subset of features classified as categorical.
+    generate_synthetic_data (bool): Flag indicating whether to generate synthetic data if none is provided.
+    test_size (float): Proportion of data to be used for testing.
+    synthetic_samples (int): Number of samples to generate in synthetic data creation.
+    X (pd.DataFrame): DataFrame holding all features (excluding target).
+    y (pd.DataFrame): DataFrame holding the target variable.
+    X_train (pd.DataFrame): Training set features.
+    X_test (pd.DataFrame): Testing set features.
+    y_train (pd.DataFrame): Training set target variable.
+    y_test (pd.DataFrame): Testing set target variable.
+    data_generator (dict): Dictionary mapping objective type (classification/regression) to the corresponding data generating function.
+
+    Methods:
+    ========
+    _generate_synthetic_data (self):
+    Generates synthetic data if the generate_synthetic_data flag is True.
+    Defines feature sets, target column, and populates the data attribute using the appropriate data generation function from data_generator.
+    _split_features (self):
+    Splits the data into features (X) and target variable (y) DataFrames.
+    Defines the feature set based on the intersection of provided features and existing columns in the data.
+    Raises an assertion error if features are not found in the data.
+    _generate_train_test_split (self):
+    Splits the features and target variable into training and testing sets using train_test_split from scikit-learn.
+    Stratifies the split based on the target variable if the objective is classification.
+    Reports the shapes of the resulting training and testing sets.
+    build (self):
+    Calls the internal methods (_generate_synthetic_data, _split_features, and _generate_train_test_split) sequentially to perform data preparation.
+    Returns the self object, allowing for method chaining.
     """
 
     def __init__(
@@ -154,7 +194,47 @@ class DataGenerator:
 
 class DataTransformerPipelineBuilder:
     """
-    Base class for building transformers for numeric and categorical features.
+    This DataTransformerPipelineBuilder class helps define pipelines for transforming both numeric and categorical
+    features in a dataset. It provides a structured approach for handling missing values, scaling numeric features,
+    and encoding categorical features, making it easier to prepare data for machine learning models.
+
+    Attributes:
+    ==========
+    The class has several attributes that store information about the feature sets and the constructed transformers:
+
+    feature_set (list): List containing all feature names in the data.
+    numeric_features (list): Subset of features classified as numerical.
+    categorical_features (list): Subset of features classified as categorical.
+    numeric_pipeline (Pipeline): Pipeline object containing transformation steps for numeric features.
+    categorical_pipeline (Pipeline): Pipeline object containing transformation steps for categorical features.
+    column_transformer (ColumnTransformer): Object combining both pipelines for unified feature transformation.
+
+    Methods:
+    ========
+    The class includes several methods that perform specific tasks related to building the transformer pipelines:
+
+    _build_numeric_column_pipeline (self):
+        Defines a pipeline for numeric feature transformations:
+        SimpleImputer with "median" strategy to handle missing values.
+        StandardScaler for standardization.
+        Assigns the constructed pipeline to the numeric_pipeline attribute.
+        Returns self for method chaining.
+    _build_categorical_pipeline (self):
+        Defines a pipeline for categorical feature transformations:
+        CountEncoder with "value" strategies for handling unknown and missing categories.
+        SimpleImputer with "most_frequent" strategy to handle missing values.
+        Assigns the constructed pipeline to the categorical_pipeline attribute.
+        Returns self for method chaining.
+    _build_column_transformer (self):
+        Creates a ColumnTransformer object that combines the individual pipelines for numeric and categorical features:
+        "num" transformer applies the numeric_pipeline to corresponding numeric feature indices.
+        "cat" transformer applies the categorical_pipeline to corresponding categorical feature indices.
+        Assigns the constructed ColumnTransformer to the column_transformer attribute.
+        Returns self for method chaining.
+    build (self):
+        Calls the internal methods (_build_numeric_column_pipeline, _build_categorical_pipeline, and _build_column_transformer) sequentially to build the transformer pipelines.
+        Returns the self object, allowing for method chaining.
+
     """
 
     def __init__(
@@ -267,8 +347,61 @@ class EstimatorPipelineBuilder:
 
 class FeatureImportanceGenerator:
     """
-    TODO: Do we need to fit the pipeline in order to generate feature importance?
-        Ultimately the data will need to be transformed.
+    Calculates and analyzes feature importance for different machine learning models.
+
+    This class facilitates the generation and analysis of feature importance for various
+    machine learning models provided in estimator pipelines. It can also plot feature importance
+    and identify significant features based on individual model importance and a voting scheme.
+
+    Attributes:
+    ===========
+    The class has several attributes that store information about the pipelines, data, and generated importance scores:
+
+    estimator_pipelines (dict): Dictionary containing scikit-learn pipelines with trained models, each identified by a name.
+    X_train (pd.DataFrame): Training features.
+    X_test (pd.DataFrame): Testing features.
+    y_train: Training target variable.
+    feature_set (list): List containing all feature names.
+    num_labels: Number of unique labels in the target variable (relevant for classification tasks).
+    plot_importance (bool): Flag indicating whether to plot feature importance using SHAP.
+    feature_importance_df (pd.DataFrame): DataFrame holding feature importance scores for each model.
+    estimator_feature_importance (dict): Dictionary storing individual feature importance dataframes for each model.
+    data_transformed (bool): Flag indicating whether data transformation has been performed.
+
+    Methods:
+    ========
+    The class includes several methods that perform specific tasks related to feature importance calculations and analysis:
+
+    _transform_data (self, name, pipeline):
+        Transforms the data using the preprocessor step in a specific pipeline (specified by name).
+        Sets the data_transformed flag to True.
+    _generate_feature_importance (self, name, pipeline):
+        Extracts the final estimator from the pipeline.
+        Fits the estimator on the training data.
+        Optionally plots feature importance using SHAP (if plot_importance is True).
+        Creates an explainer object using SHAP and calculates feature importance scores (mean absolute values) for the test data.
+        Returns a DataFrame containing feature names and calculated importance scores.
+    _join_feature_importance (self):
+        Creates a list of individual importance DataFrames from the estimator_feature_importance dictionary.
+        Concatenates the DataFrames into a single feature_importance_df and renames the columns to match model names.
+    _get_importance_features (self):
+        Iterates through each model's importance column in the feature_importance_df.
+        Calculates the median importance value for each model.
+        Creates a new column with a flag indicating whether a feature is significant based on exceeding the model's median importance.
+    _get_total_feature_votes (self):
+        Identifies columns in the DataFrame that contain significance flags.
+        Calculates the sum of significance flags across these columns (total votes for each feature).
+        Adds a new column "TOTAL_VOTES" to the DataFrame containing the calculated total votes.
+    _get_majority_vote (self):
+        Calculates a new column "IS_MAJORITY" indicating whether a feature received a majority vote (N-1 models considering it significant).
+    build (self):
+        Ensures at least one estimator pipeline is provided using an assertion.
+        Iterates through each model pipeline:
+        Transforms the data using the pipeline's preprocessor if not already done.
+        Calls _generate_feature_importance to calculate importance scores for the current model.
+        Joins the individual importance DataFrames into a single one.
+        Analyzes feature importance and adds additional columns with significance flags and voting results.
+        Returns the self object for method chaining.
     """
 
     def __init__(
@@ -311,23 +444,14 @@ class FeatureImportanceGenerator:
         return self
 
     def _generate_feature_importance(self, name: str, pipeline: Pipeline):
-        """
-        Calculates and returns feature importance using SHAP for the given pipeline.
-
-        Args:
-            pipeline: A scikit-learn pipeline containing the trained model.
-
-        Returns:
-            pandas.DataFrame: A DataFrame with two columns:
-                - "feature": The feature name.
-                - "shap_value": The SHAP value for feature importance.
-        """
+        """ """
         logger.info(f"\t Generating feature importance for {name}")
         # Access the final estimator from the pipeline
         estimator = pipeline.named_steps["estimator"]
 
         # Fit Estimator
         estimator.fit(self.X_train, self.y_train)
+
         # Plot
         if self.plot_importance:
             explainer = shap.Explainer(estimator)
@@ -360,12 +484,7 @@ class FeatureImportanceGenerator:
         return feature_imp_df
 
     def _join_feature_importance(self):
-        """
-        Joins the feature importance dataframes for each estimator into a single dataframe.
-
-        Returns:
-            pandas.DataFrame: A DataFrame containing the joined feature importance data.
-        """
+        """ """
         logger.info("Joining feature importance data.")
         # Create a list of dataframes from the feature importance dictionary
         dfs = [df for df in self.estimator_feature_importance.values()]
@@ -440,46 +559,48 @@ class FeatureImportanceGenerator:
 
 class FeatureImportanceBaseClass:
     """
-    Base class for building and evaluating machine learning models.
+    Base class for building and analyzing feature importance for multiple machine learning models.
 
-    This class provides basic functionalities for loading and preprocessing data,
-    splitting data into training and testing sets, fitting estimators, and
-    transforming data.
-
-    Args:
-        objective (str, optional): The objective of the model. Must be 'classification' or 'regression'. Defaults to 'classification'.
-        data (pd.DataFrame, optional): The pandas DataFrame containing the data. Defaults to empty DataFrame.
-        target_column (str, optional): The name of the target column in the data. Defaults to 'TARGET'.
-        test_size (float, optional): The proportion of data to use for the test set. Defaults to 0.33.
-        numeric_features (list, optional): List of names of numeric features in the data. Defaults to empty list.
-        categorical_features (list, optional): List of names of categorical features in the data. Defaults to empty list.
-        generate_synthetic_data (bool, optional): Whether to generate synthetic data if no data is provided. Defaults to False.
-        num_samples_synthetic (int, optional): Number of samples to generate if synthetic data is used. Defaults to 10000.
-        estimators (tuple, optional): A tuple containing a name and an sklearn estimator object. Defaults to an empty tuple.
+    This class serves as a foundation for building model pipelines and calculating feature importance for multiple
+    machine learning models. It facilitates data preparation, feature transformation, model pipeline construction,
+    and feature importance analysis with voting and significance flags.
 
     Attributes:
-        objective (str): The objective of the model.
-        data (pd.DataFrame): The pandas DataFrame containing the data.
-        target_column (str): The name of the target column in the data.
-        test_size (float): The proportion of data to use for the test set.
-        numeric_features (list): List of names of numeric features in the data.
-        categorical_features (list): List of names of categorical features in the data.
-        generate_synthetic_data (bool): Whether synthetic data is generated.
-        num_samples_synthetic (int): Number of samples generated if synthetic data is used.
-        estimators (tuple): A tuple containing a name and a sklearn estimator object.
-        categorical_transformer (sklearn.pipeline.Pipeline): Pipeline for categorical data transformation.
-        numeric_transformer (sklearn.pipeline.Pipeline): Pipeline for numeric data transformation.
-        column_transformer (sklearn.compose.ColumnTransformer): ColumnTransformer for combined transformations.
-        X_train (pd.DataFrame): The training data features.
-        X_test (pd.DataFrame): The test data features.
-        y_train (pd.DataFrame): The training data target labels.
-        y_test (pd.DataFrame): The test data target labels.
-        estimator_pipelines (dict): A dictionary containing the estimator name and the corresponding pipeline.
-        estimator_predictions (dict): A dictionary containing the estimator name and the corresponding predictions.
-        estimator_feature_importance (dict): A dictionary containing the estimator name and the corresponding feature importance.
-        feature_importance_df (pd.DataFrame): A DataFrame containing the joined feature importance data.
-        plot_importance (bool): Whether to plot feature importance.
+    ===========
+    The class has several attributes that store information about the configuration, data, and generated objects:
 
+    objective (str): Specifies the objective of the machine learning task ("classification" or "regression").
+    data (pd.DataFrame): Main data as a Pandas DataFrame.
+    target_column (str): Name of the target column in the data.
+    data_generator (DataGenerator): Instance of DataGenerator class responsible for data handling.
+    data_transformer_pipeline_builder (DataTransformerPipelineBuilder): Instance of DataTransformerPipelineBuilder class responsible for building feature transformation pipelines.
+    estimator_pipeline_builder (EstimatorPipelineBuilder): Instance of EstimatorPipelineBuilder class responsible for constructing pipelines with trained models.
+    feature_importance_generator (FeatureImportanceGenerator): Instance of FeatureImportanceGenerator class responsible for feature importance calculations and analysis.
+    plot_importance (bool): Flag indicating whether to plot feature importance using SHAP.
+    test_size (float): Proportion of data to be used for testing.
+    feature_set (list): List containing all feature names.
+    numeric_features (list): Subset of features classified as numerical.
+    categorical_features (list): Subset of features classified as categorical.
+    generate_synthetic_data (bool): Flag indicating whether to generate synthetic data if none is provided.
+    estimators (List[tuple[str, Union[BaseEstimator, ClassifierMixin, RegressorMixin]]): List of tuples containing model names and corresponding scikit-learn estimator objects.
+
+    Methods:
+    ========
+    The class includes two primary methods:
+
+    fit (self):
+        Creates instances of dependent classes:
+        DataGenerator: Handles data preparation and splitting.
+        DataTransformerPipelineBuilder: Builds pipelines for feature transformation.
+        EstimatorPipelineBuilder: Constructs pipelines with trained models.
+        Calls the build method on each created instance to perform their respective tasks.
+        Returns the self object for method chaining.
+    fit_transform (self):
+        Calls the fit method to ensure model pipelines are built.
+        Creates an instance of FeatureImportanceGenerator.
+        Calls the build method on the FeatureImportanceGenerator to calculate and analyze feature importance.
+        Returns the generated DataFrame containing feature importance information.
+        Overall, this FeatureImportanceBaseClass serves as a central point for managing
     """
 
     def __init__(
